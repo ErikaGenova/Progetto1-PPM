@@ -487,7 +487,8 @@ marquee {
 
 .unione-edicola div.second {
     border-bottom: none;
-    padding: 0;
+    padding: 20px 0 30px 0;
+
 }
 
 .news-edicola .comment {
@@ -557,5 +558,63 @@ marquee {
 }
 
 .img-news {
+    float: right;
+}
+
+.segmenti-speciali {
+    position: relative;
+    background-color: #f4f9ff;
+    width: 100%;
+    padding: 70px 0;
+    margin-top: 20px ;
+}
+
+.div-titolo {
+    margin: 0 var(--outside-space);
+    border-bottom: 1px solid gray;
+}
+
+.titolo-speciale {
+    font-size: 30px;
+    font-family: Playfair Display, Serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #06376b;
+    padding-bottom: 20px;
+}
+
+.centro {
+    margin: 0 var(--outside-space);
+}
+
+.news-container {
+    width: 100%;
+    position: relative;
+    margin: 20px 10px;
+}
+
+.im-speciali {
+    width: 235px;
+    height: 157px;
+    margin-bottom: 10px;
+}
+.comment-sp {
+    font-size: 14px;
+    font-weight: normal;
+    color: #00000099;
+}
+
+.titolino-sp {
+    font-size: 13px;
+    color: #06376b;
+    text-transform: uppercase;
+}
+
+.titolo-sp {
+    font-size: 20px;
+    color: black;
+}
+
+.icon-sp {
     float: right;
 }
