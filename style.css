@@ -429,6 +429,36 @@ marquee {
     line-height: normal;
 }
 
+.ribbon-container {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    width: 200px;
+    height: 38px;
+    padding-left: 30px;
+    background-color: #93C8FF;
+}
+
+.ribbon-container::before {
+    background-color: #93C8FF;
+    display: block;
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--outside-space));
+    width: var(--outside-space);
+    height: 38px;
+}
+
+.tre-min {
+    font-size: 18px;
+    color: #06376b;
+    float: right;
+    margin: auto;
+    font-weight: bold;
+}
+
+
+
 .testDiv {
     height: 600px;
     width: 300px;
@@ -437,6 +467,7 @@ marquee {
 
 .unione-edicola {
     background-color: #F8F8F8;
+    margin-top: 70px;
     width: 100%;
     padding-top: 40px;
 }
@@ -454,7 +485,45 @@ marquee {
     line-height: normal;
 }
 
+.unione-edicola div.second {
+    border-bottom: none;
+    padding: 0;
+}
+
+.news-edicola .comment {
+    display: flex;
+}
+
+.ribbon-container-edicola {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    width: 300px;
+    height: 38px;
+    padding-left: 30px;
+    background-color: #06376b;
+}
+
+.ribbon-container-edicola::before {
+    background-color: #06376b;
+    display: block;
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--outside-space));
+    width: var(--outside-space);
+    height: 38px;
+}
+
+.edicola {
+    font-size: 18px;
+    color: var(--main-text-color);
+    float: right;
+    margin: auto;
+    font-weight: bold;
+}
+
 .titolino {
+    margin: auto auto auto 0;
     font-size: 13px;
     color: #06376b;
 }
@@ -485,4 +554,8 @@ marquee {
     font-size: 14px;
     font-weight: normal;
     color: #00000099;
+}
+
+.img-news {
+    float: right;
 }
