@@ -3,16 +3,28 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0px;
     border: 0px;
+
+    /*Queste sono variabili che ho creato per agevolarmi nel centrare le card nella pagina, le riutilizzo in alcune classi per fare dei calcoli*/
+    --main-bg-color: #06376b;
+    --main-highlight-color: #BE0B26;
+    --main-text-color: white;
+    --innerColor: 190, 9, 38;
+    --outerColor: 244, 242, 240;
+    --outside-space: calc((100vw - 1024px) / 2);
 }
 
-a {
+a { /*Mi serve per far spuntare la manina quando sono sopra un link*/
     text-decoration: none;
-    color: white;
+    color: var(--main-text-color);
     cursor: pointer;
 }
 
 a:hover {
-    background-color: cadetblue;
+    text-decoration: underline;
+}
+
+.flex {
+    display: flex;
 }
 
 .block-center {
@@ -21,6 +33,39 @@ a:hover {
     padding: 10px;
 }
 
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.flex-vertical-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.image-fit-container {
+    min-width: 100%;
+}
+
+.card {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+}
+
+/*Settaggi specifici per tags*/
 .topbar {
     background-color: black;
     min-height: 34px;
@@ -43,7 +88,7 @@ a:hover {
 }
 
 .icon-negative .accent {
-    fill: white;
+    fill: var(--main-text-color);
 }
 
 .topmenu-logos {
@@ -55,7 +100,7 @@ a:hover {
 .topmenu-logos svg {
     height: 18px;
     padding-right: 40px;
-    fill: white;
+    fill: var(--main-text-color);
 }
 
 .topmenu-links {
@@ -94,28 +139,12 @@ a:hover {
     padding-left: 2px;
 }
 
-.flex {
-    display: flex;
-}
-
-.flex-vertical-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.testDiv {
-    height: 100%;
-    min-width: 200px;
-    border: 1px solid;
-}
-
 .header {
     height: 90px;
     position: relative;
     margin: 0 auto;
     width: 100%;
-    background-color: #06376b;
+    background-color: var(--main-bg-color);
 }
 
 .header-container {
@@ -140,7 +169,7 @@ a:hover {
 
 .header-menu-top ul {
     display: flex;
-    color: white;
+    color: var(--main-text-color);
     list-style-type: none;
     font-size: 14px;
     margin: 5px 0px;
@@ -159,14 +188,14 @@ a:hover {
 
 .divider {
     height: 2px;
-    background: #fff;
+    background: var(--main-text-color);
     opacity: 0.6;
     margin: 6px 0px;
 }
 
 .header-menu-bottom ul {
     display: flex;
-    color: white;
+    color: var(--main-text-color);
     list-style-type: none;
     font-size: 14px;
     margin: 5px 0px;
@@ -197,7 +226,7 @@ a:hover {
 }
 
 .header-right {
-    color: white;
+    color: var(--main-text-color);
     background-color: #0f5096;
     font-size: 14px;
 }
@@ -206,20 +235,160 @@ a:hover {
     margin: 0px 20px;
 }
 
-.no-padding {
+.prima-pagina div.card {
+    width: 1024px;
+    left: var(--outside-space);
+    border: none;
+}
+
+.prima-pagina div.card-body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+.prima-pagina h5.card-title {
+    padding-top: 75px;
+    font-size: 1.8rem;
+}
+
+
+.breaking-news-wrapper {
+    height: 375px;
+    width: 65%;
+    background-color: var(--main-bg-color);
+    margin-top: 20px;
     padding: 0px;
 }
-.prima-pagina div.card-body {
-    background-color: #06376b;
-    color: white;
+
+.breaking-news-ribbon-container {
+    position: absolute;
+    left: 0px;
+    width: 200px;
+    height: 38px;
+    padding-left: 30px;
+    background-color: var(--main-highlight-color);
 }
 
-.hidden {
-    display: none;
+.breaking-news-ribbon {
+    font-size: 18px;
 }
 
-.ribbon-title-container {
-    background-color: #BE0B26;
+.breaking-news-ribbon::before {
+    background-color: var(--main-highlight-color);
+    display: block;
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--outside-space));
+    width: var(--outside-space);
+    height: 38px;
+}
+
+/* effetto cerchi concentrici */
+
+@keyframes circle {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.bullseye {
+    position: relative;
+    top: 9px;
+}
+
+.circle {
+    /*   margin: 0 auto; */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.one {
+    animation: circle 6s 4s infinite linear;
+    background: rgb(var(--innerColor));
+}
+
+.two {
+    animation: circle 6s 2s infinite linear;
+    background: rgb(var(--innerColor));
+}
+
+.three {
+    animation: circle 6s 0s infinite linear;
+    background: rgb(var(--outerColor));
+}
+
+/* FINE effetto cerchi concentrici */
+
+
+marquee {
+    margin-left: 25px;
+}
+
+.split {
+    display: flex;
+    width: 1024px;
+    position: relative;
+    left: var(--outside-space);
+}
+
+.elenco-card {
+    width: 70%;
+    overflow-y: hidden;
+    padding-right: 20px;
+}
+
+.right-pannel-noscroll {
+    width: 30%;
+    position: sticky;
+    top: 0;
+    height: 600px;
+    /* overflow: hidden; */
+}
+
+.right-pannel-noscroll-image {
+    margin-bottom: 20px;
+}
+
+.right-pannel-noscroll-banner {
+    position: relative;
+    background-color: var(--main-bg-color);
+    margin-bottom: 20px;
+    color: var(--main-text-color);
+    height: 45px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.right-pannel-noscroll-banner::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    left: 100%;
+    width: var(--outside-space);
+    height: 45px;
+}
+
+.right-pannel-noscroll-articoli ul {
+    list-style-type: none;
+    font-size: 20px;
+    padding-left: 0px;
+}
+
+.right-pannel-noscroll-articoli ul li {
+    line-height: 50px;
+    border-bottom: 1px solid;
 }
 
 .elenco-card ul {
@@ -227,55 +396,93 @@ a:hover {
 }
 
 .card-sup-title {
-    color: #BE0B26;
+    color: var(--main-highlight-color);
 }
+
 .card-title {
     font-weight: bold;
 }
+
 .icons {
     float: right;
-}
-hr.solid {
-    border-top: 1px solid #bbb;
+    bottom: 20px;
+    position: absolute;
+    right: 0px;
 }
 
 .tre-minuti-con {
-    background-color: #06376b;
+    background-color: var(--main-bg-color);
     width: 100%;
-    height: 35%;
-
+    margin-top: 50px;
 }
 
+.tre-minuti-con div.row {
+    width: 1024px;
+    padding-top: 100px;
+}
 
-
+.tre-minuti-con div.col {
+    border-right: 1px solid white;
+    color: var(--main-text-color);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: normal;
+}
 
 .testDiv {
     height: 600px;
-    width: 800px;
-    background-color: black;
+    width: 300px;
+    background-color: green;
 }
 
-
-@media screen and (max-width: 930px) {
-    .header-right {
-        display: none;
-    }
-
-    .header-menu-bottom {
-        display: none;
-    }
-
-    .header {
-        display: block;
-    }
+.unione-edicola {
+    background-color: #F8F8F8;
+    width: 100%;
+    padding-top: 40px;
 }
 
-.first-3min-title {
-    background-color: white;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 70%;
-    left: 25%;
-    border-right: 1px solid;
+.unione-edicola div.row {
+    border-bottom: 1px solid gray;
+    width: 1024px;
+    padding-top: 100px;
+}
+
+.unione-edicola div.col {
+    border-right: 1px solid gray;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.titolino {
+    font-size: 13px;
+    color: #06376b;
+}
+
+.sottotitolino {
+    font-size: 13px;
+    font-weight: normal;
+    color: #00000099;
+    margin-bottom: 10px;
+    height: 32.2px;
+}
+
+.main-title {
+    font-size: 34px;
+    font-family: Playfair Display, Serif;
+    font-weight: normal;
+    color: #000000;
+}
+
+.nome {
+    color: #003055;
+    font-weight: 200;
+    font-size: 13px;
+}
+
+.comment {
+    padding-top: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #00000099;
 }
