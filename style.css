@@ -724,6 +724,7 @@ marquee {
 .lista-letti {
     display: flex;
 }
+
 .number {
     font-size: 50px;
     color: #06376b;
@@ -736,6 +737,86 @@ marquee {
     font-size: 17px;
     color: black;
 }
+
+.abbonati {
+    background-color: #06376b;
+    margin-top: 40px;
+}
+
+.abbonati .row .col:first-child {
+    justify-content: flex-end;
+}
+
+.img-abbonati {
+    margin-top: -80px;
+    float: right;
+    padding-right: 20px;
+}
+
+.col2-abb {
+    width: 70%;
+}
+
+.div-abbonati {
+    display: flex;
+    margin: 36px 0;
+}
+
+.title-abb {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-right: 16px;
+}
+
+.par-abbonati {
+    color: white;
+    font-size: 16px;
+}
+
+.vid-rad {
+    display: flex;
+    margin: 20px 0;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.vid {
+    height: 66px;
+    background-color: #BE0B26;
+    width: 50%;
+}
+
+.vid .centro {
+    margin-right: 0 !important;
+}
+
+.img-vid {
+    margin-top: 18px;
+}
+
+.img-play {
+    float: right;
+}
+
+.rad {
+    height: 66px;
+    background-color: #f5da1b;
+    width: 50%;
+}
+
+.rad .centro {
+    margin-left: 0;
+}
+
+.img-vid {
+    margin-top: 16px;
+}
+
+.img-vinile {
+    float: right;
+}
+
 
 /*Reponsive*/
 @media (min-width: 1200px) {
@@ -818,5 +899,24 @@ marquee {
 
     .letti ul {
         border-right: none !important;
+    }
+
+    .vid {
+        width: 100%;
+    }
+
+    .rad {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 842px) {
+    .abbonati .row .col {
+        justify-content: center !important;
+    }
+
+    .img-abbonati {
+        float: none;
     }
 }
