@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
 <div class="topbar">
     <div class="topmenu">
         <div class="topmenu-socials">
@@ -33,70 +34,122 @@
                         <span style="color: white; font-size: 14px;">Italy</span>
                     </span>
             </button>
-            </span>
             <a class="login-button" title="ACCEDI" href="?view=login" target="_top">ACCEDI</a>
         </div>
     </div>
 </div>
-<div class="header">
-    <div class="header-container flex">
-        <div class="header-left flex">
-            <div class="header-logo flex">
-                <a href="/" title="L'Unione Sarda.it">
-                    <img src="static/unionesarda-navbar.svg" width="230" style="margin: auto">
-                </a>
+
+<div class="header sticky block-center">
+    <div id="header-full" class="container">
+        <div class="row align-items-center header-container"> <!-- header-container-->
+            <div class="col justify-content-center header-left"> <!-- header-left-->
+                <div class="header-logo"> <!-- header-logo-->
+                    <a href="#" title="L'Unione Sarda.it">
+                        <img src="static/unionesarda-navbar.svg" width="230" style="margin: auto">
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="header-center flex-vertical-center">
-            <div class="header-menu flex-vertical-center">
-                <div class="header-menu-container">
-                    <div class="header-menu-top flex">
-                        <ul>
-                            <li><a title="Video" href="#">Video</a>
-                            </li>
-                            <li><a title="Sardegna" href="#">Sardegna</a>
-                            </li>
-                            <li><a title="Italia" href="#">Italia</a>
-                            </li>
-                            <li><a title="Mondo" href="#">Mondo</a>
-                            </li>
-                            <li><a title="Politica" href="#">Politica</a></li>
-                            <li><a title="Economia" href="#">Economia</a></li>
-                            <li><a title="Sport" href="#">Sport</a></li>
-                            <li><a title="Annunci" href="#">Annunci</a>
-                            </li>
-                            <li><a title="Necrologi" href="#">Necrologi</a></li>
-                            <li><a title="Meteo" href="#">Meteo</a></li>
-                        </ul>
+            <div class="col"> <!-- header-center-->
+                <div class="row" style="flex-wrap: nowrap;">
+                    <div class="col"> <!-- header-menu-->
+                        <div class=""> <!-- header-menu-container-->
+                            <div class="header-menu-top"> <!-- header-menu-top-->
+                                <ul style="list-style-type: none;">
+                                    <li><a title="Video" href="#">Video</a>
+                                    </li>
+                                    <li><a title="Sardegna" href="#">Sardegna</a>
+                                    </li>
+                                    <li><a title="Italia" href="#">Italia</a>
+                                    </li>
+                                    <li><a title="Mondo" href="#">Mondo</a>
+                                    </li>
+                                    <li><a title="Politica" href="#">Politica</a></li>
+                                    <li><a title="Economia" href="#">Economia</a></li>
+                                    <li><a title="Sport" href="#">Sport</a></li>
+                                    <li><a title="Annunci" href="#">Annunci</a>
+                                    </li>
+                                    <li><a title="Necrologi" href="#">Necrologi</a></li>
+                                    <li><a title="Meteo" href="#">Meteo</a></li>
+                                </ul>
+                            </div>
+                            <div class="divider"></div> <!-- divider-->
+                            <div class="header-menu-bottom"> <!-- header-menu-bottom-->
+                                <ul style="list-style-type: none;">
+                                    <li>TEMI CALDI DI OGGI:</li>
+                                    <li>Alfa</li>
+                                    <li>Bravo</li>
+                                    <li>Charlie</li>
+                                    <li>Delta</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="divider flex"></div>
-                    <div class="header-menu-bottom flex">
-                        <ul>
-                            <li>TEMI CALDI DI OGGI:</li>
-                            <li>Alfa</li>
-                            <li>Bravo</li>
-                            <li>Charlie</li>
-                            <li>Delta</li>
-                        </ul>
+                    <div class="col align-items-center flex">
+                        <div class="header-search"> <!-- header-search-->
+                            <button>
+                                <img src="static/cerca-navbar.svg" width="18" height="18">
+                            </button>
+                        </div>
+                        <div id="btnBurger" class="header-burger"> <!-- header-burger-->
+                            <img src="static/burgermenu.svg" width="24" height="24">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="header-search">
-                <button>
-                    <img src="static/cerca-navbar.svg" width="18" height="18">
-                </button>
-            </div>
-            <div id="btnBurger" class="header-burger">
-                <img src="static/burgermenu.svg" width="24" height="24">
+            <div class="col align-items-center justify-content-center header-right"> <!-- header-right-->
+                <a href="#">SFOGLIA IL QUOTIDIANO</a>
             </div>
         </div>
-        <div class="header-right flex-vertical-center">
-            <div class="sfoglia">
-                SFOGLIA IL QUOTIDIANO
+    </div>
+
+    <div id="header-reduced" class="container">
+        <div class="row align-items-center header-container" style="height: 50%;"> <!-- header-container-->
+            <div id="btnBurger2" class="col header-burger"> <!-- header-burger-->
+                <img src="static/burgermenu.svg" alt="menu">
+            </div>
+            <div class="col header-logo"> <!-- header-logo-->
+                <a href="#" title="L'Unione Sarda.it">
+                    <img src="static/unionesarda-navbar.svg" alt="logo Unione Sarda">
+                </a>
+            </div>
+            <div class="col">
+                <div class="header-search" style="display: flex; float: right;"> <!-- header-search-->
+                    <button>
+                        <img src="static/cerca-navbar.svg" alt="cerca">
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="divider"></div> <!-- divider-->
+        <div class="justify-content-center flex" style="height: 50%;">
+            <div class="header-menu-top" style="overflow-x: scroll;"> <!-- header-menu-top-->
+                <ul style="list-style-type: none;">
+                    <li><a title="Video" href="#">Video</a>
+                    </li>
+                    <li><a title="Sardegna" href="#">Sardegna</a>
+                    </li>
+                    <li><a title="Italia" href="#">Italia</a>
+                    </li>
+                    <li><a title="Mondo" href="#">Mondo</a>
+                    </li>
+                    <li><a title="Politica" href="#">Politica</a></li>
+                    <li><a title="Economia" href="#">Economia</a></li>
+                    <li><a title="Sport" href="#">Sport</a></li>
+                    <li><a title="Annunci" href="#">Annunci</a>
+                    </li>
+                    <li><a title="Necrologi" href="#">Necrologi</a></li>
+                    <li><a title="Meteo" href="#">Meteo</a></li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
+
+<div id="sfoglia2" class="justify-content-center">
+    <a href="#">SFOGLIA IL QUOTIDIANO</a>
+</div>
+
 <div class="main">
     <div class="prima-pagina">
         <div class="card mb-3 mt-3">
@@ -108,9 +161,9 @@
                                 <p class="vertical-center">LOREM</p>
                             </div>
                         </div>
-                        <h5 class="card-title">Title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet. Ab porro sunt quo voluptatem voluptas eum
-                            numquam officiis est voluptatem internos.</p>
+                        <h5 class="card-title">COMPITO UNIVERSITA'</h5>
+                        <p class="card-text">Per favore non mi arrestate, sto riproducendo il sito per un progetto
+                            dell'universita' :(</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -163,23 +216,22 @@
                                     <div class="card-body" style="width: 100%; height: 100%;">
                                         <h6 class="card-sup-title">Sup-title</h6>
                                         <h5 class="card-title">Title</h5>
-                                        <p class="card-text">Eos dolores nesciunt ut nesciunt consequatur qui
+                                        <p class="card-text pb-2 mb-4">Eos dolores nesciunt ut nesciunt consequatur qui
                                             perspiciatis
                                             repudiandae non repellendus iusto.
                                         </p>
                                         <div class="icons">  <!-- icone in basso a destra delle card -->
-                                            <img src="twitter-icon-gray.png" width="24" height="24">
-                                            <img src="fb-icon-gray.png" width="24" height="24">
-                                            <img src="whatsapp-icon-gray.png" width="24" height="24">
-                                            <img src="email-logo-gray.png" width="24" height="24">
-                                            <img src="message-icon.png" width="24" height="24">
+                                            <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                            <img src="static/fb-icon-gray.png" width="24" height="24">
+                                            <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                            <img src="static/email-logo-gray.png" width="24" height="24">
+                                            <img src="static/message-icon.png" width="24" height="24">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
-
                     <li>
                         <div class="card mb-3 mt-3">
                             <div class="row g-0">
@@ -190,7 +242,7 @@
                                     <div class="card-body" style="width: 100%; height: 100%;">
                                         <h6 class="card-sup-title">Sup-title</h6>
                                         <h5 class="card-title">Title</h5>
-                                        <p class="card-text">Eos dolores nesciunt ut nesciunt consequatur qui
+                                        <p class="card-text pb-2 mb-4">Eos dolores nesciunt ut nesciunt consequatur qui
                                             perspiciatis
                                             repudiandae non repellendus iusto.</p>
                                         <div class="icons">  <!-- icone in basso a destra delle card -->
@@ -205,7 +257,6 @@
                             </div>
                         </div>
                     </li>
-
                     <li>
                         <div class="card mb-3 mt-3">
                             <div class="row g-0">
@@ -216,7 +267,7 @@
                                     <div class="card-body" style="width: 100%; height: 100%;">
                                         <h6 class="card-sup-title">Sup-title</h6>
                                         <h5 class="card-title">Title</h5>
-                                        <p class="card-text">Eos dolores nesciunt ut nesciunt consequatur qui
+                                        <p class="card-text pb-2 mb-4">Eos dolores nesciunt ut nesciunt consequatur qui
                                             perspiciatis
                                             repudiandae non repellendus iusto.</p>
                                         <div class="icons">  <!-- icone in basso a destra delle card -->
@@ -231,7 +282,6 @@
                             </div>
                         </div>
                     </li>
-
                     <li>
                         <div class="card mb-3 mt-3">
                             <div class="row g-0">
@@ -242,9 +292,61 @@
                                     <div class="card-body" style="width: 100%; height: 100%;">
                                         <h6 class="card-sup-title">Sup-title</h6>
                                         <h5 class="card-title">Title</h5>
-                                        <p class="card-text">Eos dolores nesciunt ut nesciunt consequatur qui
+                                        <p class="card-text pb-2 mb-4">Eos dolores nesciunt ut nesciunt consequatur qui
                                             perspiciatis
                                             repudiandae non repellendus iusto.</p>
+                                        <div class="icons">  <!-- icone in basso a destra delle card -->
+                                            <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                            <img src="static/fb-icon-gray.png" width="24" height="24">
+                                            <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                            <img src="static/email-logo-gray.png" width="24" height="24">
+                                            <img src="static/message-icon.png" width="24" height="24">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card mb-3 mt-3">
+                            <div class="row g-0">
+                                <div class="col-md-4" style="margin-bottom: 20px">
+                                    <img src="https://picsum.photos/300" style="width: 100%;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body" style="width: 100%; height: 100%;">
+                                        <h6 class="card-sup-title">Sup-title</h6>
+                                        <h5 class="card-title">Title</h5>
+                                        <p class="card-text pb-2 mb-4">Eos dolores nesciunt ut nesciunt consequatur qui
+                                            perspiciatis
+                                            repudiandae non repellendus iusto.
+                                        </p>
+                                        <div class="icons">  <!-- icone in basso a destra delle card -->
+                                            <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                            <img src="static/fb-icon-gray.png" width="24" height="24">
+                                            <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                            <img src="static/email-logo-gray.png" width="24" height="24">
+                                            <img src="static/message-icon.png" width="24" height="24">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card mb-3 mt-3">
+                            <div class="row g-0">
+                                <div class="col-md-4" style="margin-bottom: 20px">
+                                    <img src="https://picsum.photos/300" style="width: 100%;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body" style="width: 100%; height: 100%;">
+                                        <h6 class="card-sup-title">Sup-title</h6>
+                                        <h5 class="card-title">Title</h5>
+                                        <p class="card-text pb-2 mb-4">Eos dolores nesciunt ut nesciunt consequatur qui
+                                            perspiciatis
+                                            repudiandae non repellendus iusto.
+                                        </p>
                                         <div class="icons">  <!-- icone in basso a destra delle card -->
                                             <img src="static/twitter-icon-gray.png" width="24" height="24">
                                             <img src="static/fb-icon-gray.png" width="24" height="24">
@@ -260,7 +362,8 @@
                 </ul>
             </div>
 
-            <div class="right-pannel-noscroll"> <!--Parte principale della pagina che non scompare quando si scrolla-->
+            <div class="right-pannel-noscroll">
+                <!--Parte principale della pagina che non scompare quando si scrolla-->
                 <div class="right-pannel-noscroll-image">
                     <img src="https://picsum.photos/300" style="width: 100%; margin: 10px;">
                 </div>
@@ -282,43 +385,47 @@
         </div>
     </div>
 
-
     <div class="tre-minuti-con"> <!--blocco blu centrale "3 minuti con" -->
-        <div class="row block-center" style="position: relative">
-            <div class="ribbon-container">
-                <div class="ribbon">
-                    <h2><a href="#" class="tre-min">3 MINUTI CON</a></h2>
+        <div class="centro">
+            <div id="tre-minuti-con" class="row block-center" style="position: relative">
+                <div class="ribbon-container">
+                    <div class="ribbon">
+                        <h2><a href="#" class="tre-min">3 MINUTI CON</a></h2>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
-                <br><br>
-                <a href="#"
-                   style="color:cadetblue; font-family: Playfair Display, serif; font-style: italic; font-size: 18px;">Alfa</a>
-                <br>
-                <img src="static/vecteezy_rose-flower-bouquet-watercolor-for-valentine_9667949_714.png"
-                     style="float: right; height: 136px; width: 136px">
-            </div>
-            <div class="col">
-                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
-                <br><br>
-                <a href="#"
-                   style="color:cadetblue; font-family: Playfair Display, serif; font-style: italic; font-size: 18px;">Bravo</a>
-                <br>
-                <img src="static/vecteezy_rose-flower-bouquet-watercolor-for-valentine_9667949_714.png"
-                     style="float: right; height: 136px; width: 136px">
-            </div>
-            <div class="col" style="border: none">
-                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
-                <br><br>
-                <a href="#"
-                   style="color:cadetblue; font-family: Playfair Display, serif; font-style: italic; font-size: 18px;">Charlie</a>
-                <br>
-                <img src="static/vecteezy_rose-flower-bouquet-watercolor-for-valentine_9667949_714.png"
-                     style="float: right; height: 136px; width: 136px">
+                <!--<div class="col-2"></div>-->
+                <div class="col">
+                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    <br><br>
+                    <a href="#"
+                       style="color:cadetblue; font-family: Playfair Display, serif; font-style: italic; font-size: 18px;">Alfa</a>
+                    <br>
+                    <img src="static/vecteezy_rose-flower-bouquet-watercolor-for-valentine_9667949_714.png"
+                         style="float: right; height: 136px; width: 136px">
+                </div>
+                <div class="col">
+                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    <br><br>
+                    <a href="#"
+                       style="color:cadetblue; font-family: Playfair Display, serif; font-style: italic; font-size: 18px;">Bravo</a>
+                    <br>
+                    <img src="static/vecteezy_rose-flower-bouquet-watercolor-for-valentine_9667949_714.png"
+                         style="float: right; height: 136px; width: 136px">
+                </div>
+                <div class="col" style="border: none">
+                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    <br><br>
+                    <a href="#"
+                       style="color:cadetblue; font-family: Playfair Display, serif; font-style: italic; font-size: 18px;">Charlie</a>
+                    <br>
+                    <img src="static/vecteezy_rose-flower-bouquet-watercolor-for-valentine_9667949_714.png"
+                         style="float: right; height: 136px; width: 136px">
+                </div>
+                <!-- <div class="col-2"></div>-->
             </div>
         </div>
     </div>
+
     <div class="split-container">
         <div class="split">
             <div class="elenco-card">
@@ -333,7 +440,7 @@
                                     <div class="card-body" style="width: 100%; height: 100%;">
                                         <h6 class="card-sup-title">Sup-title</h6>
                                         <h5 class="card-title">Title</h5>
-                                        <p class="card-text">Eos dolores nesciunt ut nesciunt consequatur qui
+                                        <p class="card-text pb-2 mb-4">Eos dolores nesciunt ut nesciunt consequatur qui
                                             perspiciatis
                                             repudiandae non repellendus iusto.</p>
                                         <div class="icons">  <!-- icone in basso a destra delle card -->
@@ -348,7 +455,6 @@
                             </div>
                         </div>
                     </li>
-
                     <li>
                         <div class="card mb-3 mt-3">
                             <div class="row g-0">
@@ -359,7 +465,82 @@
                                     <div class="card-body" style="width: 100%; height: 100%;">
                                         <h6 class="card-sup-title">Sup-title</h6>
                                         <h5 class="card-title">Title</h5>
-                                        <p class="card-text">Eos dolores nesciunt ut nesciunt consequatur qui
+                                        <p class="card-text pb-2 mb-4">Eos dolores nesciunt ut nesciunt consequatur qui
+                                            perspiciatis
+                                            repudiandae non repellendus iusto.</p>
+                                        <div class="icons">  <!-- icone in basso a destra delle card -->
+                                            <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                            <img src="static/fb-icon-gray.png" width="24" height="24">
+                                            <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                            <img src="static/email-logo-gray.png" width="24" height="24">
+                                            <img src="static/message-icon.png" width="24" height="24">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card mb-3 mt-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="https://picsum.photos/300" style="width: 100%;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body" style="width: 100%; height: 100%;">
+                                        <h6 class="card-sup-title">Sup-title</h6>
+                                        <h5 class="card-title">Title</h5>
+                                        <p class="card-text pb-2 mb-4">Eos dolores nesciunt ut nesciunt consequatur qui
+                                            perspiciatis
+                                            repudiandae non repellendus iusto.</p>
+                                        <div class="icons">  <!-- icone in basso a destra delle card -->
+                                            <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                            <img src="static/fb-icon-gray.png" width="24" height="24">
+                                            <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                            <img src="static/email-logo-gray.png" width="24" height="24">
+                                            <img src="static/message-icon.png" width="24" height="24">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card mb-3 mt-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="https://picsum.photos/300" style="width: 100%;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body" style="width: 100%; height: 100%;">
+                                        <h6 class="card-sup-title">Sup-title</h6>
+                                        <h5 class="card-title">Title</h5>
+                                        <p class="card-text pb-2 mb-4">Eos dolores nesciunt ut nesciunt consequatur qui
+                                            perspiciatis
+                                            repudiandae non repellendus iusto.</p>
+                                        <div class="icons">  <!-- icone in basso a destra delle card -->
+                                            <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                            <img src="static/fb-icon-gray.png" width="24" height="24">
+                                            <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                            <img src="static/email-logo-gray.png" width="24" height="24">
+                                            <img src="static/message-icon.png" width="24" height="24">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card mb-3 mt-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="https://picsum.photos/300" style="width: 100%;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body" style="width: 100%; height: 100%;">
+                                        <h6 class="card-sup-title">Sup-title</h6>
+                                        <h5 class="card-title">Title</h5>
+                                        <p class="card-text pb-2 mb-4">Eos dolores nesciunt ut nesciunt consequatur qui
                                             perspiciatis
                                             repudiandae non repellendus iusto.</p>
                                         <div class="icons">  <!-- icone in basso a destra delle card -->
@@ -376,129 +557,173 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="right-pannel-noscroll h-auto">
+                <div class="fixed">
+                    <div>
+                        <div style="height: 27px; display: flex">
+                            <span><img src="static/img%20-laterali1.svg" width="25" height="26"
+                                       style="margin-right: 5px"></span>
+                            <span class="titolino">LOREM</span>
+                        </div>
+                    </div>
+                    <div><img src="https://picsum.photos/200"></div>
+                    <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                        consectetur</a></h3>
+                    <div class="comment" style="padding: 0px">
+                        <span>Ut error voluptate aut quod sapiente cum quia beatae</span>
+                    </div>
+                    <span class="nome">Ab soluta deserunt</span>
+                </div>
+                <div class="fixed">
+                    <div>
+                        <div style="height: 27px; display: flex">
+                            <span><img src="static/img-laterali2.svg" width="44" height="22"
+                                       style="margin-right: 5px"></span>
+                            <span class="titolino">LOREM</span>
+                        </div>
+                    </div>
+                    <div><img src="https://picsum.photos/200"></div>
+                    <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                        consectetur</a></h3>
+                    <div class="comment" style="padding: 0px">
+                        <span>Ut error voluptate aut quod sapiente cum quia beatae</span>
+                    </div>
+                    <span class="nome">Ab soluta deserunt</span>
+                </div>
+            </div>
         </div>
     </div>
 
-
     <div class="unione-edicola"> <!--Segmento "l'unione in edicola" con sfondo grigio chiaro-->
-        <div class="row block-center" style="position: relative">
-            <div class="ribbon-container-edicola">
-                <div class="ribbon">
-                    <h2><a href="#" class="edicola">L'UNIONE IN EDICOLA</a></h2>
-                </div>
-            </div>
-            <div class="col col-6">
-                <div style="margin-bottom: 10px">
-                    <div style="height: 27px; display: flex">
-                        <span class="titolino">LOREM</span>
-                        <img class="h-100" src="static/top-news.svg" style="float: right">
+        <div class="centro">
+            <div class="row block-center" style="position: relative">
+                <div class="ribbon-container-edicola">
+                    <div class="ribbon">
+                        <h2><a href="#" class="edicola">L'UNIONE IN EDICOLA</a></h2>
                     </div>
-                    <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
                 </div>
-                <h3 style="margin:10px 0; display: inline-block"><a href="#" class="main-title">Lorem ipsum dolor sit
-                    amet consectetur</a></h3>
-                <span class="nome">Ab soluta deserunt</span>
-                <div class="comment">
-                    <span style="padding-right: 20px">Ut error voluptate aut quod sapiente cum quia beatae</span>
-                </div>
-            </div>
-            <div class="col col-3">
-                <div><img src="https://picsum.photos/200"></div>
-                <div>
-                    <div style="height: 27px; display: flex">
-                        <span class="titolino">LOREM</span>
-                        <img class="h-100" src="static/top-news.svg" style="float: right">
-                    </div>
-                    <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
-                </div>
-                <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet consectetur</a>
-                </h3>
-                <div class="comment" style="padding: 0px">
-                    <span>Ut error voluptate aut quod sapiente cum quia beatae</span>
-                </div>
-                <span class="nome">Ab soluta deserunt</span>
-            </div>
-            <div class="col-3" style="border: none">
-                <div><img src="https://picsum.photos/200"></div>
-                <div>
-                    <div style="height: 27px; display: flex">
-                        <span class="titolino">LOREM</span>
-                        <img class="h-100" src="static/top-news.svg" style="float: right">
-                    </div>
-                    <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
-                </div>
-                <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet consectetur</a>
-                </h3>
-                <div class="comment" style="padding: 0px">
-                    <span>Ut error voluptate aut quod sapiente cum quia beatae</span>
-                </div>
-                <span class="nome">Ab soluta deserunt</span>
-            </div>
-        </div>
-        <div class="row block-center second">
-            <div class="col col-4">
-                <div>
-                    <div style="height: 27px; display: flex">
-                        <span class="titolino">LOREM</span>
-                        <img class="h-100" src="static/top-news.svg" style="float: right">
-                    </div>
-                    <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
-                </div>
-                <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet consectetur</a>
-                </h3>
-                <span class="nome">Ab soluta deserunt</span>
-                <div class="news-edicola">
-                    <div class="comment">
-                        <div style="flex: 1">
-                            Qui veritatis dolorem At voluptatem exercitationem nam corporis doloremque aut dolor galisum
-                            eum
-                            laborum cupiditate.
+                <div class="col col-lg-6 col-12" style="margin-bottom: 30px">
+                    <div style="margin-bottom: 10px">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
                         </div>
-                        <img src="https://picsum.photos/100" class="img-news">
+                        <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
                     </div>
+                    <h3 style="margin:10px 0; display: inline-block"><a href="#" class="main-title">Lorem ipsum dolor
+                        sit amet consectetur</a></h3>
+                    <span class="nome">Ab soluta deserunt</span>
+                    <div class="comment">
+                        <span style="padding-right: 20px">Ut error voluptate aut quod sapiente cum quia beatae</span>
+                    </div>
+                </div>
+                <div class="col col-3">
+                    <div><img src="https://picsum.photos/200"></div>
+                    <div>
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
+                    </div>
+                    <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                        consectetur</a>
+                    </h3>
+                    <div class="comment" style="padding: 0px">
+                        <span>Ut error voluptate aut quod sapiente cum quia beatae</span>
+                    </div>
+                    <span class="nome">Ab soluta deserunt</span>
+                </div>
+                <div class="col-3" style="border: none">
+                    <div><img src="https://picsum.photos/200"></div>
+                    <div>
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
+                    </div>
+                    <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                        consectetur</a>
+                    </h3>
+                    <div class="comment" style="padding: 0px">
+                        <span>Ut error voluptate aut quod sapiente cum quia beatae</span>
+                    </div>
+                    <span class="nome">Ab soluta deserunt</span>
                 </div>
             </div>
-            <div class="col col-4">
-                <div>
-                    <div style="height: 27px; display: flex">
-                        <span class="titolino">LOREM</span>
-                        <img class="h-100" src="static/top-news.svg" style="float: right">
-                    </div>
-                    <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
-                </div>
-                <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet consectetur</a>
-                </h3>
-                <span class="nome">Ab soluta deserunt</span>
-                <div class="news-edicola">
-                    <div class="comment">
-                        <div style="flex: 1">
-                            Qui veritatis dolorem At voluptatem exercitationem nam corporis doloremque aut dolor galisum
-                            eum
-                            laborum cupiditate.
+            <div id="edicola-second-row" class="row block-center second">
+                <div class="col col-4">
+                    <div>
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
                         </div>
-                        <img src="https://picsum.photos/100" class="img-news">
+                        <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
                     </div>
-                </div>
-            </div>
-            <div class="col col-4" style="border: none">
-                <div>
-                    <div style="height: 27px; display: flex">
-                        <span class="titolino">LOREM</span>
-                        <img class="h-100" src="static/top-news.svg" style="float: right">
-                    </div>
-                    <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
-                </div>
-                <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet consectetur</a>
-                </h3>
-                <span class="nome">Ab soluta deserunt</span>
-                <div class="news-edicola">
-                    <div class="comment">
-                        <div style="flex: 1">
-                            Qui veritatis dolorem At voluptatem exercitationem nam corporis doloremque aut dolor galisum
-                            eum
-                            laborum cupiditate.
+                    <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                        consectetur</a>
+                    </h3>
+                    <span class="nome">Ab soluta deserunt</span>
+                    <div class="news-edicola">
+                        <div class="comment">
+                            <div style="flex: 1">
+                                Qui veritatis dolorem At voluptatem exercitationem nam corporis doloremque aut dolor
+                                galisum
+                                eum
+                                laborum cupiditate.
+                            </div>
+                            <img src="https://picsum.photos/100" class="img-news">
                         </div>
-                        <img src="https://picsum.photos/100" class="img-news">
+                    </div>
+                </div>
+                <div class="col col-4">
+                    <div>
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
+                    </div>
+                    <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                        consectetur</a>
+                    </h3>
+                    <span class="nome">Ab soluta deserunt</span>
+                    <div class="news-edicola">
+                        <div class="comment">
+                            <div style="flex: 1">
+                                Qui veritatis dolorem At voluptatem exercitationem nam corporis doloremque aut dolor
+                                galisum
+                                eum
+                                laborum cupiditate.
+                            </div>
+                            <img src="https://picsum.photos/100" class="img-news">
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-4" style="border: none">
+                    <div>
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
+                    </div>
+                    <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                        consectetur</a>
+                    </h3>
+                    <span class="nome">Ab soluta deserunt</span>
+                    <div class="news-edicola">
+                        <div class="comment">
+                            <div style="flex: 1">
+                                Qui veritatis dolorem At voluptatem exercitationem nam corporis doloremque aut dolor
+                                galisum
+                                eum
+                                laborum cupiditate.
+                            </div>
+                            <img src="https://picsum.photos/100" class="img-news">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -616,7 +841,392 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="segmenti-speciali">
+        <div class="div-titolo">
+            <div>
+                <div><a href="#" class="titolo-speciale">Lorem ipsum dolor</a></div>
+            </div>
+        </div>
+        <div class="row second centro">
+            <div class="col col-3">
+                <div class="news-container">
+                    <img src="https://picsum.photos/150" class="im-speciali">
+
+                    <div>
+                        <div>
+                            <h6 class="titolino-sp">Alfa</h6>
+                            <h5><a href="#" class="titolo-sp">Ex assumenda voluptatum quo eaque aliquam qui maiores
+                                sint</a>
+                            </h5>
+                            <p class="comment-sp">Eos dolores nesciunt ut nesciunt consequatur qui perspiciatis
+                                repudiandae non repellendus iusto.</p>
+                        </div>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-3">
+                <div class="news-container">
+                    <img src="https://picsum.photos/150" class="im-speciali">
+
+                    <div>
+                        <div>
+                            <h6 class="titolino-sp">Alfa</h6>
+                            <h5><a href="#" class="titolo-sp">Ex assumenda voluptatum quo eaque aliquam qui maiores
+                                sint</a>
+                            </h5>
+                            <p class="comment-sp">Eos dolores nesciunt ut nesciunt consequatur qui perspiciatis
+                                repudiandae non repellendus iusto.</p>
+                        </div>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-3">
+                <div class="news-container">
+                    <img src="https://picsum.photos/150" class="im-speciali">
+
+                    <div>
+                        <div>
+                            <h6 class="titolino-sp">Alfa</h6>
+                            <h5><a href="#" class="titolo-sp">Ex assumenda voluptatum quo eaque aliquam qui maiores
+                                sint</a>
+                            </h5>
+                            <p class="comment-sp">Eos dolores nesciunt ut nesciunt consequatur qui perspiciatis
+                                repudiandae non repellendus iusto.</p>
+                        </div>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-3">
+                <div class="news-container">
+                    <img src="https://picsum.photos/150" class="im-speciali">
+
+                    <div>
+                        <div>
+                            <h6 class="titolino-sp">Alfa</h6>
+                            <h5><a href="#" class="titolo-sp">Ex assumenda voluptatum quo eaque aliquam qui maiores
+                                sint</a>
+                            </h5>
+                            <p class="comment-sp">Eos dolores nesciunt ut nesciunt consequatur qui perspiciatis
+                                repudiandae non repellendus iusto.</p>
+                        </div>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fv-gallery">
+        <div class="row centro">
+            <div class="ribbon-container-gallery">
+                <div style="margin: auto">
+                    <h2><a href="#" class="gallery">Foto e video gallery</a></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="centro">
+            <div>
+                <span class="tg-videolina">TG videolina</span>
+                <span class="ultime-edizioni">Ultime Edizioni</span>
+            </div>
+        </div>
+
+        <div class="centro">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row p-0 m-0">
+                            <div class="col">
+                                <img src="https://picsum.photos/300/150" class="d-flex mx-auto w-50" alt="...">
+                            </div>
+                            <div class="col">
+                                <img src="https://picsum.photos/300/150" class="d-flex mx-auto w-50" alt="...">
+                            </div>
+                            <div class="col">
+                                <img src="https://picsum.photos/300/150" class="d-flex mx-auto w-50" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row p-0 m-0">
+                            <div class="col">
+                                <img src="https://picsum.photos/300/150" class="d-flex mx-auto w-50" alt="...">
+                            </div>
+                            <div class="col">
+                                <img src="https://picsum.photos/300/150" class="d-flex mx-auto w-50" alt="...">
+                            </div>
+                            <div class="col">
+                                <img src="https://picsum.photos/300/150" class="d-flex mx-auto w-50" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row p-0 m-0">
+                            <div class="col">
+                                <img src="https://picsum.photos/300/150" class="d-flex mx-auto w-50" alt="...">
+                            </div>
+                            <div class="col">
+                                <img src="https://picsum.photos/300/150" class="d-flex mx-auto w-50" alt="...">
+                            </div>
+                            <div class="col">
+                                <img src="https://picsum.photos/300/150" class="d-flex mx-auto w-50" alt="...">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="fv-gallery mt-0">
+        <div class="centro">
+            <div id="carouselEx2" class="carousel slide w-75" style="padding-top: 40px">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div>
+                            <a href="#">
+                                <img src="https://picsum.photos/300" class="d-block w-50 mx-auto" alt="...">
+                                <br>
+                                <h2 class="titolo-carousel w-50 mx-auto">Qui placeat delectus vel cupiditate aspernatur
+                                    sed dolor
+                                    adipisci qui eius asperiores</h2>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#">
+                            <img src="https://picsum.photos/300" class="d-block w-50 mx-auto" alt="...">
+                            <br>
+                            <h2 class="titolo-carousel w-50 mx-auto">Qui placeat delectus vel cupiditate aspernatur sed
+                                dolor
+                                adipisci qui eius asperiores</h2>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#">
+                            <img src="https://picsum.photos/300" class="d-block w-50 mx-auto" alt="...">
+                            <br>
+                            <h2 class="titolo-carousel w-50 mx-auto">Qui placeat delectus vel cupiditate aspernatur sed
+                                dolor
+                                adipisci qui eius asperiores</h2>
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselEx2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselEx2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="fv-gallery mt-0 pt-5">
+        <div class="centro">
+            <div id="carouselExample3" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row py-0 px-5 mx-5 w-auto">
+                            <div class="col">
+                                <div>
+                                    <a href="#">
+                                        <img src="https://picsum.photos/400/300" class="d-block w-100 mx-auto" alt="...">
+                                        <br>
+                                        <h2 class="titolo-carousel w-100 mx-auto">Qui placeat delectus vel cupiditate
+                                            aspernatur sed dolor</h2>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <a href="#">
+                                        <img src="https://picsum.photos/400/300" class="d-block w-100 mx-auto" alt="...">
+                                        <br>
+                                        <h2 class="titolo-carousel w-100 mx-auto">Qui placeat delectus vel cupiditate
+                                            aspernatur sed dolor</h2>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <a href="#">
+                                        <img src="https://picsum.photos/400/300" class="d-block w-100 mx-auto" alt="...">
+                                        <br>
+                                        <h2 class="titolo-carousel w-100 mx-auto">Qui placeat delectus vel cupiditate
+                                            aspernatur sed dolor</h2>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <a href="#">
+                                        <img src="https://picsum.photos/400/300" class="d-block w-100 mx-auto" alt="...">
+                                        <br>
+                                        <h2 class="titolo-carousel w-100 mx-auto">Qui placeat delectus vel cupiditate
+                                            aspernatur sed dolor</h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row py-0 px-5 mx-5 w-auto">
+                            <div class="col">
+                                <div>
+                                    <a href="#">
+                                        <img src="https://picsum.photos/400/300" class="d-block w-100 mx-auto" alt="...">
+                                        <br>
+                                        <h2 class="titolo-carousel w-100 mx-auto">Qui placeat delectus vel cupiditate
+                                            aspernatur sed dolor</h2>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <a href="#">
+                                        <img src="https://picsum.photos/400/300" class="d-block w-100 mx-auto" alt="...">
+                                        <br>
+                                        <h2 class="titolo-carousel w-100 mx-auto">Qui placeat delectus vel cupiditate
+                                            aspernatur sed dolor</h2>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <a href="#">
+                                        <img src="https://picsum.photos/400/300" class="d-block w-100 mx-auto" alt="...">
+                                        <br>
+                                        <h2 class="titolo-carousel w-100 mx-auto">Qui placeat delectus vel cupiditate
+                                            aspernatur sed dolor</h2>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <a href="#">
+                                        <img src="https://picsum.photos/400/300" class="d-block w-100 mx-auto" alt="...">
+                                        <br>
+                                        <h2 class="titolo-carousel w-100 mx-auto">Qui placeat delectus vel cupiditate
+                                            aspernatur sed dolor</h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row py-0 px-5 mx-5 w-auto">
+                            <div class="col">
+                                <div>
+                                    <a href="#">
+                                        <img src="https://picsum.photos/400/300" class="d-block w-100 mx-auto" alt="...">
+                                        <br>
+                                        <h2 class="titolo-carousel w-100 mx-auto">Qui placeat delectus vel cupiditate
+                                            aspernatur sed dolor</h2>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <a href="#">
+                                        <img src="https://picsum.photos/400/300" class="d-block w-100 mx-auto" alt="...">
+                                        <br>
+                                        <h2 class="titolo-carousel w-100 mx-auto">Qui placeat delectus vel cupiditate
+                                            aspernatur sed dolor</h2>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <a href="#">
+                                        <img src="https://picsum.photos/400/300" class="d-block w-100 mx-auto" alt="...">
+                                        <br>
+                                        <h2 class="titolo-carousel w-100 mx-auto">Qui placeat delectus vel cupiditate
+                                            aspernatur sed dolor</h2>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <a href="#">
+                                        <img src="https://picsum.photos/400/300" class="d-block w-100 mx-auto" alt="...">
+                                        <br>
+                                        <h2 class="titolo-carousel w-100 mx-auto">Qui placeat delectus vel cupiditate
+                                            aspernatur sed dolor</h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
     </div>
 
 </div>

@@ -3,6 +3,7 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0px;
     border: 0px;
+    overflow-x: hidden;
 
     /*Queste sono variabili che ho creato per agevolarmi nel centrare le card nella pagina, le riutilizzo in alcune classi per fare dei calcoli*/
     --main-bg-color: #06376b;
@@ -10,7 +11,7 @@ body {
     --main-text-color: white;
     --innerColor: 190, 9, 38;
     --outerColor: 244, 242, 240;
-    --outside-space: calc((100vw - 1024px) / 2);
+    --outside-space: max(10px, calc((100vw - 1024px) / 2));
 }
 
 a { /*Mi serve per far spuntare la manina quando sono sopra un link*/
@@ -31,6 +32,12 @@ a:hover {
     margin: auto;
     width: 50%;
     padding: 10px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
 .vertical-center {
@@ -121,27 +128,9 @@ a:hover {
     margin-left: 70px;
 }
 
-.lang-options ul {
-    max-height: initial;
-    border-radius: 0px;
-    background-color: rgba(0, 0, 0, 0.95);
-    border-color: rgba(0, 0, 0, 0.95);
-    border: 0px;
-    top: 0;
-    margin-top: 30px;
-    padding: 0;
-}
-
-.lang-options #rfs-btn {
-    padding: 0;
-    padding-top: 3px;
-    border: 0;
-    padding-left: 2px;
-}
-
 .header {
     height: 90px;
-    position: relative;
+    /*position: relative;*/
     margin: 0 auto;
     width: 100%;
     background-color: var(--main-bg-color);
@@ -235,8 +224,16 @@ a:hover {
     margin: 0px 20px;
 }
 
+.main {
+    overflow-x: scroll;
+}
+
+.prima-pagina {
+    width: 80%;
+}
+
 .prima-pagina div.card {
-    width: 1024px;
+    width: 60%;
     left: var(--outside-space);
     border: none;
 }
@@ -252,7 +249,6 @@ a:hover {
     padding-top: 75px;
     font-size: 1.8rem;
 }
-
 
 .breaking-news-wrapper {
     height: 375px;
@@ -335,9 +331,13 @@ marquee {
     margin-left: 25px;
 }
 
+.split-container {
+    width: 80%;
+}
+
 .split {
     display: flex;
-    width: 1024px;
+    width: 60%;
     position: relative;
     left: var(--outside-space);
 }
@@ -391,6 +391,13 @@ marquee {
     border-bottom: 1px solid;
 }
 
+.fixed {
+    /*position: fixed;*/
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+
 .elenco-card ul {
     list-style-type: none;
 }
@@ -417,7 +424,7 @@ marquee {
 }
 
 .tre-minuti-con div.row {
-    width: 1024px;
+    width: 100%;
     padding-top: 100px;
 }
 
@@ -458,7 +465,6 @@ marquee {
 }
 
 
-
 .testDiv {
     height: 600px;
     width: 300px;
@@ -474,7 +480,7 @@ marquee {
 
 .unione-edicola div.row {
     border-bottom: 1px solid gray;
-    width: 1024px;
+    width: 100%;
     padding-top: 100px;
 }
 
@@ -566,7 +572,7 @@ marquee {
     background-color: #f4f9ff;
     width: 100%;
     padding: 70px 0;
-    margin-top: 20px ;
+    margin-top: 20px;
 }
 
 .div-titolo {
@@ -594,10 +600,10 @@ marquee {
 }
 
 .im-speciali {
-    width: 235px;
-    height: 157px;
+    width: 100%;
     margin-bottom: 10px;
 }
+
 .comment-sp {
     font-size: 14px;
     font-weight: normal;
@@ -617,4 +623,133 @@ marquee {
 
 .icon-sp {
     float: right;
+}
+
+.fv-gallery {
+    position: relative;
+    background-color: black;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.ribbon-container-gallery {
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    width: 600px;
+    height: 38px;
+    padding-left: 30px;
+    background-color: #BE0B26;
+}
+
+.ribbon-container-gallery::before {
+    background-color: #BE0B26;
+    display: block;
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--outside-space));
+    width: var(--outside-space);
+    height: 38px;
+}
+
+.fv-gallery div.row {
+    width: 100%;
+    padding-top: 100px;
+}
+
+.gallery {
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: right;
+}
+
+.tg-videolina {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #BE0B26;
+}
+
+.ultime-edizioni {
+    font-size: 13px;
+    color: white;
+}
+
+.titolo-carousel {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/*Reponsive*/
+@media (min-width: 1200px) {
+    #header-full {
+        display: flex;
+    }
+
+    #header-reduced {
+        display: none;
+    }
+
+    #sfoglia2 {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    #header-full {
+        display: none;
+    }
+
+    #header-reduced {
+        display: block;
+    }
+
+    #sfoglia2 {
+        display: flex;
+    }
+
+    .header-right {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .topmenu-logos svg {
+        display: none;
+    }
+
+    .header-menu-bottom {
+        display: none;
+    }
+
+    .header {
+        display: block;
+    }
+
+    #tre-minuti-con {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #edicola-second-row {
+        display: none;
+    }
+
+    .split {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .elenco-card {
+        width: 100%;
+    }
+
+    .right-pannel-noscroll {
+        width: 100%;
+        height: auto;
+    }
+
 }
