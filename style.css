@@ -817,6 +817,76 @@ marquee {
     float: right;
 }
 
+.middle-footer {
+    background-color: #06376b;
+    width: 100%;
+}
+
+.middle-footer .centro .row {
+    justify-content: space-between;
+}
+
+.title-midf {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    max-width: 120px;
+}
+
+.footer-bottom {
+    background-color: black;
+    width: 100%;
+    padding: 48px 30px;
+}
+
+.footer-sx {
+    text-align: left;
+    width: 33%;
+    min-height: 250px;
+}
+
+.img-footer {
+    width: 260px;
+    height: 23px;
+    margin: 13px 0;
+    float: left;
+}
+
+.footer-col {
+    padding: 20px 0 20px 28px;
+}
+
+.footer-tcen {
+    color: white;
+    font-size: 14px;
+    text-align: left;
+}
+
+.footer-text-sx {
+    padding: 4px 0;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+
+}
+
+.footer-img-sx {
+    width: 150px;
+    height: 50px;
+    padding: 2px 0;
+}
+
+.footer-fin {
+    margin-top: 46px;
+    margin-bottom: 20px;
+    padding: 4px 0;
+}
+
+.footer-tfin {
+    font-size: 14px;
+    color: gray;
+}
 
 /*Reponsive*/
 @media (min-width: 1200px) {
