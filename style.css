@@ -4,6 +4,8 @@ body {
     margin: 0px;
     border: 0px;
     overflow-x: hidden;
+    width: 100%;
+    height: 90%;
 
     /*Queste sono variabili che ho creato per agevolarmi nel centrare le card nella pagina, le riutilizzo in alcune classi per fare dei calcoli*/
     --main-bg-color: #06376b;
@@ -12,6 +14,10 @@ body {
     --innerColor: 190, 9, 38;
     --outerColor: 244, 242, 240;
     --outside-space: max(10px, calc((100vw - 1024px) / 2));
+}
+
+*::-webkit-scrollbar {
+    display: none;
 }
 
 a { /*Mi serve per far spuntare la manina quando sono sopra un link*/
@@ -32,12 +38,6 @@ a:hover {
     margin: auto;
     width: 50%;
     padding: 10px;
-}
-
-.sticky {
-    position: sticky;
-    top: 0;
-    z-index: 9999;
 }
 
 .vertical-center {
@@ -65,6 +65,12 @@ a:hover {
     min-width: 100%;
 }
 
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
 .card {
     border-top: none;
     border-left: none;
@@ -78,7 +84,7 @@ a:hover {
     min-height: 34px;
 }
 
-.topmenu {
+/*.topmenu {
     min-height: inherit;
     display: flex;
     align-items: center;
@@ -88,7 +94,7 @@ a:hover {
 .topmenu-socials {
     display: flex;
     width: 10%;
-}
+}*/
 
 .icon-negative {
     display: flex;
@@ -98,21 +104,21 @@ a:hover {
     fill: var(--main-text-color);
 }
 
-.topmenu-logos {
+/*.topmenu-logos {
     display: flex;
     width: 50%;
     justify-content: center;
-}
+}*/
 
-.topmenu-logos svg {
+.topmenu-logos img {
     height: 18px;
-    padding-right: 40px;
+    /*padding-right: 40px;*/
     fill: var(--main-text-color);
 }
 
 .topmenu-links {
     display: flex;
-    width: 10%;
+   /* width: 10%;*/
 }
 
 .topmenu-links svg {
@@ -124,36 +130,68 @@ a:hover {
     background: black;
 }
 
-.topmenu-links a {
-    margin-left: 70px;
+.login-button {
+    /*margin-left: 40px;*/
+}
+
+#flagName {
+    color: var(--main-text-color);
+    font-size: 14px;
+    min-width: 60px;
+    float: left;
+    display: flex;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 34px;
+}
+
+.dropText {
+    position: absolute;
+    background-color: black;
+    top: 34px;
+    width: 170px;
+    z-index: 10000;
+}
+
+.dropText a {
+    margin-left: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropText img {
+    margin-right: 10px;
+}
+
+.dropText a:hover {
+    background-color: grey;
+    color: white;
 }
 
 .header {
     height: 90px;
-    /*position: relative;*/
     margin: 0 auto;
     width: 100%;
     background-color: var(--main-bg-color);
 }
 
 .header-container {
-    display: flex;
+    max-width: 1440px;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
-    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.header-left {
+    display: flex;
 }
 
 .header-logo {
-    align-items: center;
-}
-
-.header-logo a {
-    width: 230px
-}
-
-.header-center {
-    margin: 0px 30px;
+    width: 230px;
+    z-index: 10001;
 }
 
 .header-menu-top ul {
@@ -201,10 +239,6 @@ a:hover {
     font-weight: bold;
 }
 
-.header-search {
-    margin-left: 120px;
-}
-
 .header-search button {
     background-color: transparent;
     border: none;
@@ -214,22 +248,92 @@ a:hover {
     margin: 10px;
 }
 
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.menuSearch input {
+    position: absolute;
+    top: 15px;
+    left: 270px;
+    width: 600px;
+    background-color: transparent;
+    border: none;
+}
+
+#navbarBurgerMenu {
+    position: absolute;
+    top: 0px;
+    width: 1060px;
+    height: 650px;
+    padding-left: 0;
+    background-color: black;
+    opacity: 0.9;
+}
+
+#navbarBurgerMenu ul {
+    top: 100px;
+    list-style-type: none;
+}
+
+#navbarBurgerMenu li {
+    font-size: 13px;
+    color: var(--main-text-color);
+    line-height: 30px;
+}
+
+.menuSearch2 input {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    width: 250px;
+    background-color: transparent;
+    border: none;
+}
+
+#navbarBurgerMenu2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 1200px;
+    padding-left: 0;
+    background-color: black;
+    z-index: 10002;
+    opacity: 0.9;
+}
+
+#navbarBurgerMenu2 ul {
+    top: 100px;
+    list-style-type: none;
+}
+
+#navbarBurgerMenu2 li {
+    font-size: 13px;
+    color: var(--main-text-color);
+    line-height: 30px;
+}
+
+.sidemenu-logo {
+    padding: 20px;
+    top: -34px;
+    position: relative;
+    background: black;
+}
+
 .header-right {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90px;
     color: var(--main-text-color);
     background-color: #0f5096;
     font-size: 14px;
 }
 
-.sfoglia {
-    margin: 0px 20px;
-}
-
-.main {
-    overflow-x: scroll;
-}
-
-.prima-pagina {
-    width: 80%;
+#sfoglia2 {
+    color: var(--main-text-color);
+    background-color: #0f5096;
+    font-size: 14px;
 }
 
 .prima-pagina div.card {
@@ -279,6 +383,11 @@ a:hover {
     left: calc(-1 * var(--outside-space));
     width: var(--outside-space);
     height: 38px;
+}
+
+.main {
+    overflow-X: scroll;
+    height: 90%;
 }
 
 /* effetto cerchi concentrici */
@@ -353,7 +462,6 @@ marquee {
     position: sticky;
     top: 0;
     height: 600px;
-    /* overflow: hidden; */
 }
 
 .right-pannel-noscroll-image {
@@ -625,6 +733,16 @@ marquee {
     float: right;
 }
 
+.gruppo-news {
+    height: auto;
+    position: relative;
+    padding: 40px 0 70px;
+}
+
+.gruppo-news .centro .row {
+    position: relative;
+}
+
 .fv-gallery {
     position: relative;
     background-color: black;
@@ -889,7 +1007,7 @@ marquee {
 }
 
 /*Reponsive*/
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     #header-full {
         display: flex;
     }
@@ -903,7 +1021,7 @@ marquee {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
     #header-full {
         display: none;
     }
@@ -919,10 +1037,8 @@ marquee {
     .header-right {
         display: none;
     }
-}
 
-@media (max-width: 1024px) {
-    .topmenu-logos svg {
+    .topmenu-logos img {
         display: none;
     }
 

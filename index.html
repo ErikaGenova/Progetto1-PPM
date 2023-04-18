@@ -1,11 +1,14 @@
 <head>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script src="bootstrap/jquery-3.6.4.min.js"></script>
+
     <meta charset="UTF-8"/>
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap/bootstrap.bundle.min.js">
-        <script src="progetto1.js"></script>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="progetto1.js"></script>
     <link href="style.css" rel="stylesheet">
+
     <title>L'Unione Sarda</title>
     <link rel="icon" href="static/favicon.ico">
 </head>
@@ -13,48 +16,160 @@
 <body>
 
 <div class="topbar">
-    <div class="topmenu">
-        <div class="topmenu-socials">
+    <div class="row container mx-auto align-items-center"> <!--topmenu-->
+<!--
+        <div class="col"></div>
+-->
+        <div class="col-2"> <!--topmenu-socials-->
             <div class="icon-negative">
                 <a href="#"><img src="static/twitt-topbar.svg" width="24" height="18"></a>
                 <a href="#"><img src="static/fb-topbar.svg" width="24" height="18"></a>
             </div>
         </div>
-        <div class="topmenu-logos">
+        <div class="col-7 justify-content-center flex topmenu-logos"> <!--topmenu-logos-->
             <a href="#"><img src="static/videolina-topbar.svg" width="116.5" height="18" style="margin-right: 36px"></a>
             <a href="#"><img src="static/radiolina-topbar.svg" width="95.4" height="18" style="margin-right: 36px"></a>
             <a href="#"><img src="static/sardinia-topbar.svg" width="118.4" height="18" style="margin-right: 36px"></a>
             <a href="#"><img src="static/pbm-topbar.svg" width="53" height="18" style="margin-right: 36px"></a>
         </div>
-        <div class="topmenu-links">
-            <button type="button">
-                    <span class="flex">
-                        <span style="width: 40px;">
-                            <img src="static/italiabandiera-topbar.svg" width="19" height="18">
+        <div class="col-3 topmenu-links justify-content-end align-items-center">
+            <div class="dropdown" style="display: flex; align-items: center;">
+                <button type="button" onclick="btnCountryClick()">
+                        <span class="flex">
+                            <span style="width: 40px;">
+                                <img id="flag" src="https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/it.svg"
+                                     width="24" height="24">
+                            </span>
+                            <span id="flagName">Italia</span>
                         </span>
-                        <span style="color: white; font-size: 14px;">Italy</span>
-                    </span>
-            </button>
-            <a class="login-button" title="ACCEDI" href="?view=login" target="_top">ACCEDI</a>
+                </button>
+                <div class="dropText hidden">
+                    <a href="#"
+                       onclick="countryClick('https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/it.svg', 'Italia')"><img
+                            src="https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/it.svg" width="24"
+                            height="24">Italia</a>
+                    <a href="#"
+                       onclick="countryClick('https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/gb.svg', 'United Kingdom')"><img
+                            src="https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/gb.svg" width="24"
+                            height="24">United Kindom</a>
+                    <a href="#"
+                       onclick="countryClick('https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/ge.svg', 'Germania')"><img
+                            src="https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/ge.svg" width="24"
+                            height="24">Germania</a>
+                    <a href="#"
+                       onclick="countryClick('https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/ru.svg', 'Russia')"><img
+                            src="https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/ru.svg" width="24"
+                            height="24">Russia</a>
+                    <a href="#"
+                       onclick="countryClick('https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/cn.svg', 'Cina')"><img
+                            src="https://cdn.jsdelivr.net/npm/svg-country-flags@1.2.10/svg/cn.svg" width="24"
+                            height="24">Cina</a>
+                    <a href="#"></a>
+                </div>
+            </div>
+
+            <a class="login-button" title="ACCEDI" href="#" target="_top">ACCEDI</a>
         </div>
+<!--
+        <div class="col"></div>
+-->
     </div>
 </div>
 
-<div class="header sticky block-center">
+<div class="header sticky flex align-items-center">
     <div id="header-full" class="container">
-        <div class="row align-items-center header-container"> <!-- header-container-->
-            <div class="col justify-content-center header-left"> <!-- header-left-->
+        <div class="row align-items-center header-container">
+
+            <div class="collapse" id="navbarBurgerMenu">
+                <div class="menuSearch">
+                    <input type="text" placeholder="Cerca...">
+                </div>
+                <div class="row" style="top: 100px; position: absolute; width: 100%;">
+                    <div class="col-3">
+                        <ul>
+                            <li>METEO</li>
+                            <li>CRONACA SARDEGNA</li>
+                            <li>CAGLIARI</li>
+                            <li>PROVINCIA DI CAGLIARI</li>
+                            <li>SULCIS IGLESIENTE</li>
+                            <li>MEDIO CAMPIDANO</li>
+                            <li>ORISTANO E PROVINCIA</li>
+                            <li>SASSARI E PROVINCIA</li>
+                            <li>GALLURA</li>
+                            <li>NUORO E PROVINCIA</li>
+                            <li>OGLIASTRA</li>
+                            <li>AGENDA</li>
+                            <li>CRONACA</li>
+                            <li>ITALIA</li>
+                            <li>MONDO</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3">
+                        <ul>
+                            <li>POLITICA</li>
+                            <li>ECONOMIA</li>
+                            <li>SERVIZI ALLE IMPRESE</li>
+                            <li>LAVORO</li>
+                            <li>BANDI</li>
+                            <li>SPORT IN SARDEGNA</li>
+                            <li>SPORT</li>
+                            <li>SASSARI E PROVINCIA</li>
+                            <li>RISULTATI E CLASSIFICHE</li>
+                            <li>CALCIO</li>
+                            <li>CALCIO REGIONALE</li>
+                            <li>BASKET</li>
+                            <li>VOLLEY</li>
+                            <li>SPORT DI SQUADRA</li>
+                            <li>MOTORI</li>
+                            <li>TENNIS</li>
+                            <li>ALTRI SPORT</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3">
+                        <ul>
+                            <li>VIDEO</li>
+                            <li>FOTO</li>
+                            <li>CULTURA</li>
+                            <li>SPETTACOLI</li>
+                            <li>GOSSIP</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3">
+                        <ul>
+                            <li>SARDI NEL MONDO</li>
+                            <li>NOTIZIE</li>
+                            <li>EVENTI</li>
+                            <li>#CARAUNIONE</li>
+                            <li>3 MINUTI CON</li>
+                            <li>INSULARITÀ</li>
+                            <li>INFO AZIENDE</li>
+                            <li>ABBONATI</li>
+                            <li>ANNUNCI</li>
+                            <li>NECROLOGI</li>
+                            <li>PUBBLICITÀ</li>
+                            <li>SPIAGGE</li>
+                            <li>STORE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col justify-content-center header-left">
                 <div class="header-logo"> <!-- header-logo-->
                     <a href="#" title="L'Unione Sarda.it">
                         <img src="static/unionesarda-navbar.svg" width="230" style="margin: auto">
                     </a>
                 </div>
             </div>
+
             <div class="col"> <!-- header-center-->
                 <div class="row" style="flex-wrap: nowrap;">
-                    <div class="col"> <!-- header-menu-->
+                    <div class="col d-flex align-content-center"> <!-- header-menu-->
                         <div class=""> <!-- header-menu-container-->
-                            <div class="header-menu-top"> <!-- header-menu-top-->
+                            <div class="header-menu-top">
                                 <ul style="list-style-type: none;">
                                     <li><a title="Video" href="#">Video</a>
                                     </li>
@@ -73,72 +188,163 @@
                                     <li><a title="Meteo" href="#">Meteo</a></li>
                                 </ul>
                             </div>
-                            <div class="divider"></div> <!-- divider-->
-                            <div class="header-menu-bottom"> <!-- header-menu-bottom-->
+                            <div class="divider"></div>
+                            <div class="header-menu-bottom">
                                 <ul style="list-style-type: none;">
                                     <li>TEMI CALDI DI OGGI:</li>
-                                    <li>Alfa</li>
-                                    <li>Bravo</li>
-                                    <li>Charlie</li>
-                                    <li>Delta</li>
+                                    <li>Portovesme</li>
+                                    <li>Cantieri</li>
+                                    <li>Vinitaly</li>
+                                    <li>Cagliari Calcio</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col align-items-center flex">
-                        <div class="header-search"> <!-- header-search-->
-                            <button>
+                        <div class="header-search">
+                            <button class="navbar-toggler" type="button" style="border: none;" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarBurgerMenu" aria-controls="navbarBurgerMenu"
+                                    aria-expanded="false" aria-label="Toggle navigation">
                                 <img src="static/cerca-navbar.svg" width="18" height="18">
                             </button>
                         </div>
-                        <div id="btnBurger" class="header-burger"> <!-- header-burger-->
+
+                        <nav class="navbar navbar-dark ">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler" type="button" style="border: none;"
+                                        data-bs-toggle="collapse" data-bs-target="#navbarBurgerMenu"
+                                        aria-controls="navbarBurgerMenu" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </nav>
+
+                        <!-- <div id="btnBurger" class="header-burger">
                             <img src="static/burgermenu.svg" width="24" height="24">
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
-            <div class="col align-items-center justify-content-center header-right"> <!-- header-right-->
+
+            <div class="col align-items-center justify-content-center header-right">
                 <a href="#">SFOGLIA IL QUOTIDIANO</a>
             </div>
         </div>
     </div>
 
     <div id="header-reduced" class="container">
-        <div class="row align-items-center header-container" style="height: 50%;"> <!-- header-container-->
-            <div id="btnBurger2" class="col header-burger"> <!-- header-burger-->
-                <img src="static/burgermenu.svg" alt="menu">
+        <div class="row align-items-center header-container" style="height: 50%;">
+
+            <div class="col">
+                <div class="collapse" id="navbarBurgerMenu2">
+                    <div class="sidemenu-logo">
+                        <a href="#" title="L'Unione Sarda.it" style="width: 170px; display: block;">
+                            <img src="static/unionesarda-navbar.svg" width="230" style="margin: auto">
+                        </a>
+                    </div>
+                    <div class="menuSearch2">
+                        <input type="text" placeholder="Cerca...">
+                    </div>
+                    <div class="row" style="top: 100px; position: absolute; width: 100%;">
+
+                        <div class="col">
+                            <ul>
+                                <li>METEO</li>
+                                <li>CRONACA SARDEGNA</li>
+                                <li>CAGLIARI</li>
+                                <li>PROVINCIA DI CAGLIARI</li>
+                                <li>SULCIS IGLESIENTE</li>
+                                <li>MEDIO CAMPIDANO</li>
+                                <li>ORISTANO E PROVINCIA</li>
+                                <li>SASSARI E PROVINCIA</li>
+                                <li>GALLURA</li>
+                                <li>NUORO E PROVINCIA</li>
+                                <li>OGLIASTRA</li>
+                                <li>AGENDA</li>
+                                <li>CRONACA</li>
+                                <li>ITALIA</li>
+                                <li>MONDO</li>
+                                <li>POLITICA</li>
+                                <li>ECONOMIA</li>
+                                <li>SERVIZI ALLE IMPRESE</li>
+                                <li>LAVORO</li>
+                                <li>BANDI</li>
+                                <li>SPORT IN SARDEGNA</li>
+                                <li>SPORT</li>
+                                <li>SASSARI E PROVINCIA</li>
+                                <li>RISULTATI E CLASSIFICHE</li>
+                                <li>CALCIO</li>
+                                <li>CALCIO REGIONALE</li>
+                                <li>BASKET</li>
+                                <li>VOLLEY</li>
+                                <li>SPORT DI SQUADRA</li>
+                                <li>MOTORI</li>
+                                <li>TENNIS</li>
+                                <li>ALTRI SPORT</li>
+                                <li>VIDEO</li>
+                                <li>FOTO</li>
+                                <li>CULTURA</li>
+                                <li>SPETTACOLI</li>
+                                <li>GOSSIP</li>
+                                <li>SARDI NEL MONDO</li>
+                                <li>NOTIZIE</li>
+                                <li>EVENTI</li>
+                                <li>#CARAUNIONE</li>
+                                <li>3 MINUTI CON</li>
+                                <li>INSULARITÀ</li>
+                                <li>INFO AZIENDE</li>
+                                <li>ABBONATI</li>
+                                <li>ANNUNCI</li>
+                                <li>NECROLOGI</li>
+                                <li>PUBBLICITÀ</li>
+                                <li>SPIAGGE</li>
+                                <li>STORE</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="navbar navbar-dark ">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" style="border: none;" data-bs-toggle="collapse"
+                                data-bs-target="#navbarBurgerMenu2" aria-controls="navbarBurgerMenu2"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </nav>
             </div>
-            <div class="col header-logo"> <!-- header-logo-->
+
+            <div class="col header-logo">
                 <a href="#" title="L'Unione Sarda.it">
-                    <img src="static/unionesarda-navbar.svg" alt="logo Unione Sarda">
+                    <img src="static/unionesarda-navbar.svg" width="230" style="margin: auto">
                 </a>
             </div>
+
             <div class="col">
                 <div class="header-search" style="display: flex; float: right;"> <!-- header-search-->
-                    <button>
-                        <img src="static/cerca-navbar.svg" alt="cerca">
+                    <button class="navbar-toggler" type="button" style="border: none;" data-bs-toggle="collapse"
+                            data-bs-target="#navbarBurgerMenu2" aria-controls="navbarBurgerMenu2" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <img src="static/cerca-navbar.svg" width="18" height="18">
                     </button>
                 </div>
 
             </div>
         </div>
-        <div class="divider"></div> <!-- divider-->
+        <div class="divider"></div>
         <div class="justify-content-center flex" style="height: 50%;">
-            <div class="header-menu-top" style="overflow-x: scroll;"> <!-- header-menu-top-->
+            <div class="header-menu-top" style="overflow-x: scroll;">
                 <ul style="list-style-type: none;">
-                    <li><a title="Video" href="#">Video</a>
-                    </li>
-                    <li><a title="Sardegna" href="#">Sardegna</a>
-                    </li>
-                    <li><a title="Italia" href="#">Italia</a>
-                    </li>
-                    <li><a title="Mondo" href="#">Mondo</a>
-                    </li>
+                    <li><a title="Video" href="#">Video</a></li>
+                    <li><a title="Sardegna" href="#">Sardegna</a></li>
+                    <li><a title="Italia" href="#">Italia</a></li>
+                    <li><a title="Mondo" href="#">Mondo</a></li>
                     <li><a title="Politica" href="#">Politica</a></li>
                     <li><a title="Economia" href="#">Economia</a></li>
                     <li><a title="Sport" href="#">Sport</a></li>
-                    <li><a title="Annunci" href="#">Annunci</a>
-                    </li>
+                    <li><a title="Annunci" href="#">Annunci</a></li>
                     <li><a title="Necrologi" href="#">Necrologi</a></li>
                     <li><a title="Meteo" href="#">Meteo</a></li>
                 </ul>
@@ -741,7 +947,6 @@
             <div class="col col-3">
                 <div class="news-container">
                     <img src="https://picsum.photos/150" class="im-speciali">
-
                     <div>
                         <div>
                             <h6 class="titolino-sp">Alfa</h6>
@@ -840,6 +1045,142 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gruppo-news">
+        <div class="centro">
+            <div class="row" style="border-bottom: 1px solid gray; padding: 100px 30px 30px 30px">
+                <div class="ribbon-container-edicola">
+                    <div class="ribbon">
+                        <h2><a href="#" class="edicola">Qui voluptate vero</a></h2>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="https://picsum.photos/150" class="im-speciali">
+                    <div>
+                        <div>
+                            <h6 class="titolino-sp">Alfa</h6>
+                            <h5><a href="#" class="titolo-sp">Ex assumenda voluptatum quo eaque aliquam qui maiores
+                                sint</a>
+                            </h5>
+                            <p class="comment-sp">Eos dolores nesciunt ut nesciunt consequatur qui perspiciatis
+                                repudiandae non repellendus iusto.</p>
+                        </div>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col"> <img src="https://picsum.photos/150" class="im-speciali">
+                    <div>
+                        <div>
+                            <h6 class="titolino-sp">Alfa</h6>
+                            <h5><a href="#" class="titolo-sp">Ex assumenda voluptatum quo eaque aliquam qui maiores
+                                sint</a>
+                            </h5>
+                            <p class="comment-sp">Eos dolores nesciunt ut nesciunt consequatur qui perspiciatis
+                                repudiandae non repellendus iusto.</p>
+                        </div>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div></div>
+                <div class="col"> <img src="https://picsum.photos/150" class="im-speciali">
+                    <div>
+                        <div>
+                            <h6 class="titolino-sp">Alfa</h6>
+                            <h5><a href="#" class="titolo-sp">Ex assumenda voluptatum quo eaque aliquam qui maiores
+                                sint</a>
+                            </h5>
+                            <p class="comment-sp">Eos dolores nesciunt ut nesciunt consequatur qui perspiciatis
+                                repudiandae non repellendus iusto.</p>
+                        </div>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div></div>
+            </div>
+            <div class="row" style="border-bottom: 1px solid gray; padding: 30px">
+                <div class="col"> <img src="https://picsum.photos/150" class="im-speciali">
+                    <div>
+                        <div>
+                            <h6 class="titolino-sp">Alfa</h6>
+                            <h5><a href="#" class="titolo-sp">Ex assumenda voluptatum quo eaque aliquam qui maiores
+                                sint</a>
+                            </h5>
+                            <p class="comment-sp">Eos dolores nesciunt ut nesciunt consequatur qui perspiciatis
+                                repudiandae non repellendus iusto.</p>
+                        </div>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div></div>
+                <div class="col"> <img src="https://picsum.photos/150" class="im-speciali">
+                    <div>
+                        <div>
+                            <h6 class="titolino-sp">Alfa</h6>
+                            <h5><a href="#" class="titolo-sp">Ex assumenda voluptatum quo eaque aliquam qui maiores
+                                sint</a>
+                            </h5>
+                            <p class="comment-sp">Eos dolores nesciunt ut nesciunt consequatur qui perspiciatis
+                                repudiandae non repellendus iusto.</p>
+                        </div>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div></div>
+                <div class="col"> <img src="https://picsum.photos/150" class="im-speciali">
+                    <div>
+                        <div>
+                            <h6 class="titolino-sp">Alfa</h6>
+                            <h5><a href="#" class="titolo-sp">Ex assumenda voluptatum quo eaque aliquam qui maiores
+                                sint</a>
+                            </h5>
+                            <p class="comment-sp">Eos dolores nesciunt ut nesciunt consequatur qui perspiciatis
+                                repudiandae non repellendus iusto.</p>
+                        </div>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div></div>
             </div>
         </div>
     </div>
