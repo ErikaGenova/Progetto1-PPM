@@ -75,7 +75,7 @@ a:hover {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 /*Settaggi specifici per tags*/
@@ -83,18 +83,6 @@ a:hover {
     background-color: black;
     min-height: 34px;
 }
-
-/*.topmenu {
-    min-height: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.topmenu-socials {
-    display: flex;
-    width: 10%;
-}*/
 
 .icon-negative {
     display: flex;
@@ -104,12 +92,6 @@ a:hover {
     fill: var(--main-text-color);
 }
 
-/*.topmenu-logos {
-    display: flex;
-    width: 50%;
-    justify-content: center;
-}*/
-
 .topmenu-logos img {
     height: 18px;
     /*padding-right: 40px;*/
@@ -118,10 +100,9 @@ a:hover {
 
 .topmenu-links {
     display: flex;
-    /* width: 10%;*/
 }
 
-.topmenu-links svg {
+.topmenu-links img {
     margin-right: 10px;
 }
 
@@ -142,6 +123,7 @@ a:hover {
     display: flex;
 }
 
+/* dropdown with flags */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -170,12 +152,18 @@ a:hover {
     background-color: grey;
     color: white;
 }
+/* Fine dropdown with flags */
 
 .header {
     height: 90px;
     margin: 0 auto;
     width: 100%;
     background-color: var(--main-bg-color);
+}
+
+.header-full {
+    display: flex;
+    height: 100%;
 }
 
 .header-container {
@@ -199,8 +187,8 @@ a:hover {
     color: var(--main-text-color);
     list-style-type: none;
     font-size: 14px;
-    margin: 5px 0px;
-    padding: 0px;
+    margin: 5px 0;
+    padding: 0;
 }
 
 .header-menu-top ul li {
@@ -210,14 +198,35 @@ a:hover {
 }
 
 .header-menu-top ul li:last-child {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .divider {
     height: 2px;
     background: var(--main-text-color);
     opacity: 0.6;
-    margin: 6px 0px;
+    margin: 6px 0;
+}
+
+.divider-menu {
+    /* position: relative; */
+    /* top: 20px; */
+    height: 2px;
+    background: var(--main-text-color);
+    opacity: 0.6;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.divider-menu2 {
+    position: relative;
+    top: 30px;
+    height: 2px;
+    background: var(--main-text-color);
+    opacity: 1;
+    margin-left: 20px;
+    margin-right: 40px;
 }
 
 .header-menu-bottom ul {
@@ -225,8 +234,8 @@ a:hover {
     color: var(--main-text-color);
     list-style-type: none;
     font-size: 14px;
-    margin: 5px 0px;
-    padding: 0px;
+    margin: 5px 0;
+    padding: 0;
 }
 
 .header-menu-bottom ul li {
@@ -259,11 +268,13 @@ a:hover {
     width: 600px;
     background-color: transparent;
     border: none;
+    outline: none;
+    color: var(--main-text-color);
 }
 
 #navbarBurgerMenu {
     position: absolute;
-    top: 0px;
+    top: 0;
     width: 1060px;
     height: 650px;
     padding-left: 0;
@@ -289,18 +300,27 @@ a:hover {
     width: 250px;
     background-color: transparent;
     border: none;
+    outline: none;
+    color: white;
+}
+
+.sidemenu-close {
+    color: white;
+    margin-left: 75px;
+    font-size: 20px;
 }
 
 #navbarBurgerMenu2 {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: -34px;
+    left: 0;
     width: 300px;
     height: 1200px;
     padding-left: 0;
     background-color: black;
     z-index: 10002;
     opacity: 0.9;
+    overflow-y: scroll;
 }
 
 #navbarBurgerMenu2 ul {
@@ -315,8 +335,9 @@ a:hover {
 }
 
 .sidemenu-logo {
-    padding: 20px;
-    top: -34px;
+    display: flex;
+    padding-top: 20px;
+    padding-left: 20px;
     position: relative;
     background: black;
 }
@@ -324,7 +345,7 @@ a:hover {
 .header-right {
     display: flex;
     flex-wrap: wrap;
-    height: 90px;
+    height: 100%;
     color: var(--main-text-color);
     background-color: #0f5096;
     font-size: 14px;
@@ -387,7 +408,7 @@ a:hover {
 
 .main {
     overflow-X: scroll;
-    height: 90%;
+    height: 100%;
 }
 
 /* effetto cerchi concentrici */
