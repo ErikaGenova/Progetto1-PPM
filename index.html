@@ -17,9 +17,6 @@
 
 <div class="topbar">
     <div class="row container mx-auto align-items-center"> <!--topmenu-->
-<!--
-        <div class="col"></div>
--->
         <div class="col-2"> <!--topmenu-socials-->
             <div class="icon-negative">
                 <a href="#"><img src="static/twitt-topbar.svg" width="24" height="18"></a>
@@ -70,9 +67,6 @@
 
             <a class="login-button" title="ACCEDI" href="#" target="_top">ACCEDI</a>
         </div>
-<!--
-        <div class="col"></div>
--->
     </div>
 </div>
 
@@ -359,9 +353,9 @@
 
 <div class="main">
     <div class="prima-pagina">
-        <div class="card mb-3 mt-3">
+        <div class="card centro mb-3 mt-3">
             <div class="row g-0">
-                <div class="col-md-8">
+                <div class="col-lg-8">
                     <div class="card-body">
                         <div class="breaking-news-ribbon-container">
                             <div class="breaking-news-ribbon">
@@ -373,7 +367,7 @@
                             dell'universita' :(</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4">
                     <img src="https://picsum.photos/300/300" class="image-fit-container">
                 </div>
             </div>
@@ -410,7 +404,7 @@
     </div>
 
     <div class="split-container">
-        <div class="split">
+        <div class="split centro">
             <div class="elenco-card">
                 <ul style="padding-left: 0px">
                     <li>
@@ -634,7 +628,7 @@
     </div>
 
     <div class="split-container">
-        <div class="split">
+        <div class="split centro">
             <div class="elenco-card">
                 <ul>
                     <li>
@@ -774,7 +768,7 @@
                             <span class="titolino">LOREM</span>
                         </div>
                     </div>
-                    <div><img src="https://picsum.photos/200"></div>
+                    <div><img src="https://picsum.photos/200" width="100%"></div>
                     <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
                         consectetur</a></h3>
                     <div class="comment" style="padding: 0px">
@@ -790,7 +784,7 @@
                             <span class="titolino">LOREM</span>
                         </div>
                     </div>
-                    <div><img src="https://picsum.photos/200"></div>
+                    <div><img src="https://picsum.photos/200" width="100%"></div>
                     <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
                         consectetur</a></h3>
                     <div class="comment" style="padding: 0px">
@@ -810,19 +804,37 @@
                         <h2><a href="#" class="edicola">L'UNIONE IN EDICOLA</a></h2>
                     </div>
                 </div>
-                <div class="col col-lg-6 col-12" style="margin-bottom: 30px">
-                    <div style="margin-bottom: 10px">
-                        <div style="height: 27px; display: flex">
-                            <span class="titolino">LOREM</span>
-                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                <div id="main-col" class="col col-lg-6 col-12" style="margin-bottom: 30px">
+                    <div id="edicola-first">
+                        <div style="margin-bottom: 10px">
+                            <div style="height: 27px; display: flex">
+                                <span class="titolino">LOREM</span>
+                                <img class="h-100" src="static/top-news.svg" style="float: right">
+                            </div>
+                            <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
                         </div>
-                        <span class="sottotitolino">Et ipsa omnis aut enim ducimus aut sapiente sint a odio saepe.</span>
+                        <h3 style="margin:10px 0; display: inline-block"><a href="#" class="main-title">Lorem ipsum
+                            dolor
+                            sit amet consectetur</a></h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div class="comment">
+                            <span style="padding-right: 20px">Ut error voluptate aut quod sapiente cum quia beatae</span>
+                        </div>
                     </div>
-                    <h3 style="margin:10px 0; display: inline-block"><a href="#" class="main-title">Lorem ipsum dolor
-                        sit amet consectetur</a></h3>
-                    <span class="nome">Ab soluta deserunt</span>
-                    <div class="comment">
-                        <span style="padding-right: 20px">Ut error voluptate aut quod sapiente cum quia beatae</span>
+                    <div id="edicola-sec">
+                        <div style="margin-bottom: 10px">
+                            <div style="height: 27px; display: flex">
+                                <span class="titolino">LOREM</span>
+                                <img class="h-100" src="static/top-news.svg" style="float: right">
+                            </div>
+                        </div>
+                        <h3 style="margin:10px 0; display: inline-block"><a href="#" class="main-title-sec">Lorem ipsum
+                            dolor
+                            sit amet consectetur</a></h3>
+                        <div class="nome">Ab soluta deserunt</div>
+                        <div class="comment">
+                            <span style="padding-right: 20px">Ut error voluptate aut quod sapiente cum quia beatae</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col col-3">
@@ -934,6 +946,75 @@
                     </div>
                 </div>
             </div>
+            <div id="edicola-hidden-row" class="row" style="width: 100%; border: none; padding: 40px 0 20px 0">
+                <div style="display: flex; overflow-x: scroll">
+                    <div class="card-scroll">
+                        <div><img src="https://picsum.photos/200" width="95%"></div>
+                        <div style="width: 95%">
+                            <div style="height: 27px; display: flex">
+                                <span class="titolino">LOREM</span>
+                                <img class="h-100" src="static/top-news.svg" style="float: right">
+                            </div>
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                    </div>
+                    <div class="card-scroll">
+                        <div><img src="https://picsum.photos/200" width="95%"></div>
+                        <div style="width: 95%">
+                            <div style="height: 27px; display: flex">
+                                <span class="titolino">LOREM</span>
+                                <img class="h-100" src="static/top-news.svg" style="float: right">
+                            </div>
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                    </div>
+                    <div class="card-scroll">
+                        <div><img src="https://picsum.photos/200" width="95%"></div>
+                        <div style="width: 95%">
+                            <div style="height: 27px; display: flex">
+                                <span class="titolino">LOREM</span>
+                                <img class="h-100" src="static/top-news.svg" style="float: right">
+                            </div>
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                    </div>
+                    <div class="card-scroll">
+                        <div><img src="https://picsum.photos/200" width="95%"></div>
+                        <div style="width: 95%">
+                            <div style="height: 27px; display: flex">
+                                <span class="titolino">LOREM</span>
+                                <img class="h-100" src="static/top-news.svg" style="float: right">
+                            </div>
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                    </div>
+                    <div class="card-scroll">
+                        <div><img src="https://picsum.photos/200" width="95%"></div>
+                        <div style="width: 95%">
+                            <div style="height: 27px; display: flex">
+                                <span class="titolino">LOREM</span>
+                                <img class="h-100" src="static/top-news.svg" style="float: right">
+                            </div>
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -943,7 +1024,7 @@
                 <div><a href="#" class="titolo-speciale">Lorem ipsum dolor</a></div>
             </div>
         </div>
-        <div class="row second centro">
+        <div class="row second centro speciali-row">
             <div class="col col-3">
                 <div class="news-container">
                     <img src="https://picsum.photos/150" class="im-speciali">
@@ -1047,11 +1128,108 @@
                 </div>
             </div>
         </div>
+
+        <div class="row speciali-hidden-row" style="width: 100%; border: none; padding: 40px 0 20px 0">
+            <div style="display: flex; overflow-x: scroll">
+                <div class="card-scroll">
+                    <div><img src="https://picsum.photos/200" width="95%"></div>
+                    <div style="width: 95%">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-scroll">
+                    <div><img src="https://picsum.photos/200" width="95%"></div>
+                    <div style="width: 95%">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-scroll">
+                    <div><img src="https://picsum.photos/200" width="95%"></div>
+                    <div style="width: 95%">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-scroll">
+                    <div><img src="https://picsum.photos/200" width="95%"></div>
+                    <div style="width: 95%">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="gruppo-news">
         <div class="centro">
-            <div class="row" style="border-bottom: 1px solid gray; padding: 100px 30px 30px 30px">
+            <div class="row gruppo-row" style="border-bottom: 1px solid gray; padding: 100px 30px 30px 30px">
                 <div class="ribbon-container-edicola">
                     <div class="ribbon">
                         <h2><a href="#" class="edicola">Qui voluptate vero</a></h2>
@@ -1079,7 +1257,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col"> <img src="https://picsum.photos/150" class="im-speciali">
+                <div class="col"><img src="https://picsum.photos/150" class="im-speciali">
                     <div>
                         <div>
                             <h6 class="titolino-sp">Alfa</h6>
@@ -1098,8 +1276,9 @@
                                 <img src="static/message-icon.png" width="24" height="24">
                             </div>
                         </div>
-                    </div></div>
-                <div class="col"> <img src="https://picsum.photos/150" class="im-speciali">
+                    </div>
+                </div>
+                <div class="col"><img src="https://picsum.photos/150" class="im-speciali">
                     <div>
                         <div>
                             <h6 class="titolino-sp">Alfa</h6>
@@ -1118,10 +1297,11 @@
                                 <img src="static/message-icon.png" width="24" height="24">
                             </div>
                         </div>
-                    </div></div>
+                    </div>
+                </div>
             </div>
-            <div class="row" style="border-bottom: 1px solid gray; padding: 30px">
-                <div class="col"> <img src="https://picsum.photos/150" class="im-speciali">
+            <div class="row gruppo-row" style="border-bottom: 1px solid gray; padding: 30px">
+                <div class="col"><img src="https://picsum.photos/150" class="im-speciali">
                     <div>
                         <div>
                             <h6 class="titolino-sp">Alfa</h6>
@@ -1140,8 +1320,9 @@
                                 <img src="static/message-icon.png" width="24" height="24">
                             </div>
                         </div>
-                    </div></div>
-                <div class="col"> <img src="https://picsum.photos/150" class="im-speciali">
+                    </div>
+                </div>
+                <div class="col"><img src="https://picsum.photos/150" class="im-speciali">
                     <div>
                         <div>
                             <h6 class="titolino-sp">Alfa</h6>
@@ -1160,8 +1341,9 @@
                                 <img src="static/message-icon.png" width="24" height="24">
                             </div>
                         </div>
-                    </div></div>
-                <div class="col"> <img src="https://picsum.photos/150" class="im-speciali">
+                    </div>
+                </div>
+                <div class="col"><img src="https://picsum.photos/150" class="im-speciali">
                     <div>
                         <div>
                             <h6 class="titolino-sp">Alfa</h6>
@@ -1180,8 +1362,84 @@
                                 <img src="static/message-icon.png" width="24" height="24">
                             </div>
                         </div>
-                    </div></div>
+                    </div>
+                </div>
             </div>
+            <div id="gruppo-hidden-row" class="row" style="width: 100%; border: none; padding: 40px 0 20px 0">
+                <div style="display: flex; overflow-x: scroll; margin-top: 70px">
+                    <div class="ribbon-container-edicola">
+                        <div class="ribbon">
+                            <h2><a href="#" class="edicola">Qui voluptate vero</a></h2>
+                        </div>
+                    </div>
+                    <div class="card-scroll">
+                        <div><img src="https://picsum.photos/200" width="95%"></div>
+                        <div style="width: 95%">
+                            <div style="height: 27px; display: flex">
+                                <span class="titolino">LOREM</span>
+                                <img class="h-100" src="static/top-news.svg" style="float: right">
+                            </div>
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                    </div>
+                    <div class="card-scroll">
+                        <div><img src="https://picsum.photos/200" width="95%"></div>
+                        <div style="width: 95%">
+                            <div style="height: 27px; display: flex">
+                                <span class="titolino">LOREM</span>
+                                <img class="h-100" src="static/top-news.svg" style="float: right">
+                            </div>
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                    </div>
+                    <div class="card-scroll">
+                        <div><img src="https://picsum.photos/200" width="95%"></div>
+                        <div style="width: 95%">
+                            <div style="height: 27px; display: flex">
+                                <span class="titolino">LOREM</span>
+                                <img class="h-100" src="static/top-news.svg" style="float: right">
+                            </div>
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                    </div>
+                    <div class="card-scroll">
+                        <div><img src="https://picsum.photos/200" width="95%"></div>
+                        <div style="width: 95%">
+                            <div style="height: 27px; display: flex">
+                                <span class="titolino">LOREM</span>
+                                <img class="h-100" src="static/top-news.svg" style="float: right">
+                            </div>
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                    </div>
+                    <div class="card-scroll">
+                        <div><img src="https://picsum.photos/200" width="95%"></div>
+                        <div style="width: 95%">
+                            <div style="height: 27px; display: flex">
+                                <span class="titolino">LOREM</span>
+                                <img class="h-100" src="static/top-news.svg" style="float: right">
+                            </div>
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -1191,11 +1449,10 @@
                 <div><a href="#" class="titolo-speciale">Lorem ipsum dolor</a></div>
             </div>
         </div>
-        <div class="row second centro">
+        <div class="row second centro speciali-row">
             <div class="col col-3">
                 <div class="news-container">
                     <img src="https://picsum.photos/150" class="im-speciali">
-
                     <div>
                         <div>
                             <h6 class="titolino-sp">Alfa</h6>
@@ -1293,6 +1550,103 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row speciali-hidden-row" style="width: 100%; border: none; padding: 40px 0 20px 0">
+            <div style="display: flex; overflow-x: scroll">
+                <div class="card-scroll">
+                    <div><img src="https://picsum.photos/200" width="95%"></div>
+                    <div style="width: 95%">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-scroll">
+                    <div><img src="https://picsum.photos/200" width="95%"></div>
+                    <div style="width: 95%">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-scroll">
+                    <div><img src="https://picsum.photos/200" width="95%"></div>
+                    <div style="width: 95%">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-scroll">
+                    <div><img src="https://picsum.photos/200" width="95%"></div>
+                    <div style="width: 95%">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -1707,11 +2061,10 @@
                 <div><a href="#" class="titolo-speciale">Lorem ipsum dolor</a></div>
             </div>
         </div>
-        <div class="row second centro">
+        <div class="row second centro speciali-row">
             <div class="col col-3">
                 <div class="news-container">
                     <img src="https://picsum.photos/150" class="im-speciali">
-
                     <div>
                         <div>
                             <h6 class="titolino-sp">Alfa</h6>
@@ -1809,6 +2162,103 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row speciali-hidden-row" style="width: 100%; border: none; padding: 40px 0 20px 0">
+            <div style="display: flex; overflow-x: scroll">
+                <div class="card-scroll">
+                    <div><img src="https://picsum.photos/200" width="95%"></div>
+                    <div style="width: 95%">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-scroll">
+                    <div><img src="https://picsum.photos/200" width="95%"></div>
+                    <div style="width: 95%">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-scroll">
+                    <div><img src="https://picsum.photos/200" width="95%"></div>
+                    <div style="width: 95%">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-scroll">
+                    <div><img src="https://picsum.photos/200" width="95%"></div>
+                    <div style="width: 95%">
+                        <div style="height: 27px; display: flex">
+                            <span class="titolino">LOREM</span>
+                            <img class="h-100" src="static/top-news.svg" style="float: right">
+                        </div>
+                        <h3><a href="#" class="main-title" style="font-size: 20px">Lorem ipsum dolor sit amet
+                            consectetur</a>
+                        </h3>
+                        <span class="nome">Ab soluta deserunt</span>
+                        <div>
+                            <div class="icon-sp">
+                                <img src="static/twitter-icon-gray.png" width="24" height="24">
+                                <img src="static/fb-icon-gray.png" width="24" height="24">
+                                <img src="static/whatsapp-icon-gray.png" width="24" height="24">
+                                <img src="static/email-logo-gray.png" width="24" height="24">
+                                <img src="static/message-icon.png" width="24" height="24">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -1979,11 +2429,11 @@
         <div class="middle-footer">
             <div class="centro">
                 <div class="row d-flex py-2 align-items-center">
-                    <div class="col text-center title-midf">Consulta il tuo abbonamento</div>
-                    <div class="col text-center title-midf">Acquista un abbonamento</div>
-                    <div class="col text-center title-midf">La biblioteca dell'identità</div>
-                    <div class="col text-center title-midf">Annunci</div>
-                    <div class="col text-center title-midf">Pagine sarde</div>
+                    <div class="col-12 col-md-2 text-center title-midf">Consulta il tuo abbonamento</div>
+                    <div class="col-12 col-md-2 text-center title-midf">Acquista un abbonamento</div>
+                    <div class="col-12 col-md-2 text-center title-midf">La biblioteca dell'identità</div>
+                    <div class="col-12 col-md-2 text-center title-midf">Annunci</div>
+                    <div class="col-12 col-md-2 text-center title-midf">Pagine sarde</div>
                 </div>
             </div>
         </div>
@@ -1991,15 +2441,15 @@
         <div class="footer-bottom">
             <div class="centro">
                 <div class="row">
-                    <div class="col footer-sx" style="border-right: 1px solid gray">
+                    <div class="col-12 col-md-4 footer-sx" style="border-right: 1px solid gray">
                         <img class="img-footer" src="static/unionesarda-footer.svg">
                         <img class="img-footer" src="static/videolina-footer2.svg" style="margin-left: -54px">
                         <img class="img-footer" src="static/radiolina-footer2.svg" style="margin-left: -66px">
                         <img class="img-footer" src="static/commerce-footer2.svg" style="margin-left: -52px">
                         <img class="img-footer" src="static/pbm-footer2.svg" style="margin-left: -94px">
                     </div>
-                    <div class="col footer-col" style="border-right: 1px solid gray">
-                        <ul style="list-style: none; padding: 0">
+                    <div class="col-12 col-md-4 footer-col" style="border-right: 1px solid gray">
+                        <ul class="footer-text-sx" style="list-style: none; padding: 10px">
                             <li><a href="#" class="footer-tcen">Cookie e Privacy policy </a></li>
                             <li><a href="#" class="footer-tcen">Necrologi e Economici</a></li>
                             <li><a href="#" class="footer-tcen">Pubblicità</a></li>
@@ -2007,10 +2457,11 @@
                             <li><a href="#" class="footer-tcen">Modifica impostazioni privacy</a></li>
                         </ul>
                     </div>
-                    <div class="col footer-col">
+                    <div class="col-12 col-md-4 footer-col">
                         <div>
                             <p class="footer-text-sx">Scarica l'app de L'Unione Sarda</p>
                             <img src="static/app-download-appstore.png" class="footer-img-sx">
+                            <br>
                             <img src="static/app-download-googleplay-150-45.png" class="footer-img-sx">
                         </div>
                         <br>
@@ -2034,10 +2485,6 @@
     </div>
 
 </div>
-
-
-</div>
-
 
 <div id="menu-window" class="testDiv hidden">
     <!--Menù nero nascosto che appare quando si preme il burger nella navbar-->

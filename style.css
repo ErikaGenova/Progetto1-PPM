@@ -1,8 +1,8 @@
 body {
     font-size: 1rem;
     font-family: 'Lato', sans-serif;
-    margin: 0px;
-    border: 0px;
+    margin: 0;
+    border: 0;
     overflow-x: hidden;
     width: 100%;
     height: 90%;
@@ -118,7 +118,7 @@ a:hover {
 
 .topmenu-links {
     display: flex;
-   /* width: 10%;*/
+    /* width: 10%;*/
 }
 
 .topmenu-links svg {
@@ -337,8 +337,8 @@ a:hover {
 }
 
 .prima-pagina div.card {
-    width: 60%;
-    left: var(--outside-space);
+    /*width: 60%;*/
+    /*left: var(--outside-space);*/
     border: none;
 }
 
@@ -441,14 +441,14 @@ marquee {
 }
 
 .split-container {
-    width: 80%;
+    /*width: 80%;*/
 }
 
 .split {
     display: flex;
-    width: 60%;
     position: relative;
-    left: var(--outside-space);
+    /*width: 60%;*/
+    /*left: var(--outside-space);*/
 }
 
 .elenco-card {
@@ -653,9 +653,15 @@ marquee {
 
 .main-title {
     font-size: 34px;
-    font-family: Playfair Display, Serif;
+    font-family: Playfair Display, serif;
     font-weight: normal;
     color: #000000;
+}
+
+.main-title-sec {
+    font-size: 34px;
+    font-family: Playfair Display, serif;
+    color: black;
 }
 
 .nome {
@@ -669,6 +675,12 @@ marquee {
     font-size: 14px;
     font-weight: normal;
     color: #00000099;
+}
+
+.card-scroll {
+    min-width: 500px !important;
+    padding: 0 5px;
+    margin-bottom: 10px;
 }
 
 .img-news {
@@ -690,7 +702,7 @@ marquee {
 
 .titolo-speciale {
     font-size: 30px;
-    font-family: Playfair Display, Serif;
+    font-family: Playfair Display, serif;
     font-weight: bold;
     font-style: italic;
     color: #06376b;
@@ -949,8 +961,9 @@ marquee {
     font-weight: bold;
     color: white;
     text-transform: uppercase;
-    max-width: 120px;
+    padding: 10px;
 }
+
 
 .footer-bottom {
     background-color: black;
@@ -972,7 +985,7 @@ marquee {
 }
 
 .footer-col {
-    padding: 20px 0 20px 28px;
+    padding-top: 20px;
 }
 
 .footer-tcen {
@@ -1019,6 +1032,22 @@ marquee {
     #sfoglia2 {
         display: none;
     }
+
+    #edicola-hidden-row {
+        display: none;
+    }
+
+    #edicola-sec {
+        display: none;
+    }
+
+    .speciali-hidden-row {
+        display: none;
+    }
+
+    #gruppo-hidden-row {
+        display: none;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -1055,7 +1084,33 @@ marquee {
         flex-direction: column;
     }
 
+    .tre-minuti-con div.col {
+        border: none;
+    }
+
+    .main-title {
+        font-size: 24px !important;
+        font-weight: bold;
+    }
+
     #edicola-second-row {
+        display: none;
+    }
+
+    .unione-edicola .col-3 {
+        display: none;
+    }
+
+    #edicola-first {
+        display: none;
+    }
+
+    #main-col {
+        border: none;
+        width: 100%;
+    }
+
+    .speciali-row {
         display: none;
     }
 
@@ -1071,6 +1126,10 @@ marquee {
     .right-pannel-noscroll {
         width: 100%;
         height: auto;
+    }
+
+    .gruppo-row {
+        display: none;
     }
 
     .body-pod .row .col ul li:not(:first-child) {
@@ -1093,6 +1152,42 @@ marquee {
 
     .rad {
         width: 100%;
+    }
+
+    .middle-footer {
+        padding: 30px;
+    }
+
+    .footer-sx,.footer-col  {
+        border-right: none !important;
+    }
+
+    .footer-col:not(:last-child) {
+        border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
+    }
+
+    .img-footer {
+        width: 100%;
+        height: 23px;
+        margin: 13px 0 !important;
+        float: left;
+    }
+
+    .footer-bottom .col-12 {
+        width: 100% !important;
+        text-align: center;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-text-sx {
+        text-align: center;
+    }
+
+    .footer-bottom img {
+        float: none!important;
     }
 }
 
