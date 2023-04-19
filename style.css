@@ -1143,16 +1143,16 @@ marquee {
     }
 
     .split {
-        width: 100%;
+        width: calc(100% - 10px);
         flex-wrap: wrap;
     }
 
     .elenco-card {
-        width: 100%;
+        width: calc(100% - 10px);
     }
 
     .right-pannel-noscroll {
-        width: 100%;
+        width: calc(100% - 10px);
         height: auto;
     }
 
