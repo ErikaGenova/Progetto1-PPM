@@ -16,6 +16,7 @@ function main() {
     const divider = $('.divider')
     const headerMenuBottom = $('.header-menu-bottom')
     const topbar = $('.topbar')
+    const headerMenuTop = $('.header-menu-top')
     const main = document.querySelector('.main')
 
     main.addEventListener('scroll', () => {
@@ -27,11 +28,24 @@ function main() {
             divider.hide()
             topbar.hide()
             headerMenuBottom.hide()
+            header.stop().animate({ height: "50px" }, 0)
+            if(window.innerWidth < 1024) {
+                headerMenuTop.hide()
+                $("#sfoglia2").hide()
+                header.stop().animate({ height: "40px" }, 0)
+                header.css("padding-top", "10px")
+            }
         }
+
         else {
             topbar.show()
             divider.show()
             headerMenuBottom.show()
+            header.stop().animate({ height: "90px" }, 100)
+            headerMenuTop.show()
+            if(window.innerWidth < 1024) {
+                $("#sfoglia2").show()
+            }
         }
     });
 }
