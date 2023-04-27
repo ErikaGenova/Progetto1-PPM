@@ -1076,6 +1076,10 @@ marquee {
     #gruppo-hidden-row {
         display: none;
     }
+
+    #abbonati-small {
+        display: none;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -1163,6 +1167,15 @@ marquee {
     .body-pod .row .col ul li:not(:first-child) {
         display: none;
     }
+
+    #abbonati-full {
+        display: none;
+    }
+
+    .img-abbonati {
+        margin: auto;
+    }
+
 }
 
 @media (max-width: 768px) {
